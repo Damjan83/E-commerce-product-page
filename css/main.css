@@ -77,8 +77,9 @@ ul li {
     width: 90px;
     height: auto; }
 
-.product-desc :nth-child(1) {
-  color: #ff7d1a; }
+.product-desc {
+  width: 45%;
+  height: auto; }
 
 html {
   box-sizing: border-box;
