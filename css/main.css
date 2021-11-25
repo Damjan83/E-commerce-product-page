@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+.header {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffede0; }
+
+.menu {
+  display: flex;
+  align-items: center; }
+  .menu ul {
+    height: 100%;
+    display: flex; }
+  .menu img {
+    margin-right: 50px; }
+
+ul li {
+  display: flex;
+  align-items: center; }
+  ul li a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #68707d; }
+    ul li a:hover {
+      color: #1d2025; }
+
+.menu ul li:hover {
+  border-bottom: 2px solid #ff7d1a; }
+
+.menu-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.user-photo {
+  width: 40%; }
+  .user-photo img {
+    max-width: 100%;
+    height: auto; }
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px; }
+
+.main-product {
+  width: 45%;
+  height: auto; }
+
+.main-product-description {
+  width: 45%;
+  height: auto;
+  background-color: lightgoldenrodyellow; }
+
+.mySlide {
+  display: none; }
+  .mySlide img {
+    border-radius: 0.625rem; }
+
+.mySlide.active {
+  display: block; }
+
+.mySlide-thumnails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px; }
+  .mySlide-thumnails img {
+    border-radius: 0.625rem;
+    width: 90px;
+    height: auto; }
+
+html {
+  box-sizing: border-box;
+  font-size: 16px; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  font-size: 1em;
+  font-family: 'Kumbh Sans' , sans-serif; }

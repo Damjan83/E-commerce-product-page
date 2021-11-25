@@ -1,0 +1,47 @@
+.header {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid map-get($color, c-orange-pale);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    ul {
+        height: 100%;
+        display: flex;
+    }
+    img {
+        margin-right: 50px;
+    }
+}
+ul li {
+    display: flex;
+    align-items: center;
+    a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: map-get($color, c-dark-grayish-blue);
+        &:hover {
+            color: map-get($color, c-vark-blue);
+        }
+    }
+}
+.menu ul li:hover {
+    border-bottom: 2px solid map-get($color, c-orange);
+}
+.menu-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-photo {
+    width: 40%;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

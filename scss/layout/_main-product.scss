@@ -1,0 +1,28 @@
+.main-product {
+    width: 45%;
+    height: auto;
+}
+.main-product-description {
+    width: 45%;
+    height: auto;
+    background-color: lightgoldenrodyellow;
+}
+.mySlide {
+    display: none;
+    img {
+        border-radius: 0.625rem;
+    }
+}
+.mySlide.active {
+    display: block;
+}
+.mySlide-thumnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    img {
+        border-radius: 0.625rem;
+        width: 90px;
+        height: auto;
+    }
+}
