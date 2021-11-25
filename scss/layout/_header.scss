@@ -39,9 +39,13 @@ ul li {
     justify-content: space-between;
 }
 .user-photo {
-    width: 40%;
+    width: 50%;
     img {
         max-width: 100%;
         height: auto;
+        &:hover {
+            border: 2px solid map-get($color, c-orange);
+            border-radius: 50%;
+        }
     }
 }

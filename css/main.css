@@ -35,12 +35,15 @@ ul li {
   justify-content: space-between; }
 
 .user-photo {
-  width: 40%; }
+  width: 50%; }
   .user-photo img {
     max-width: 100%;
     height: auto; }
+    .user-photo img:hover {
+      border: 2px solid #ff7d1a;
+      border-radius: 50%; }
 
-.main-section {
+.container {
   display: flex;
   justify-content: space-between;
   width: 75%;
@@ -73,6 +76,9 @@ ul li {
     border-radius: 0.625rem;
     width: 90px;
     height: auto; }
+
+.product-desc :nth-child(1) {
+  color: #ff7d1a; }
 
 html {
   box-sizing: border-box;

@@ -1,0 +1,5 @@
+.product-desc {
+    :nth-child(1) {
+        color: map-get($color , c-orange);
+    }
+}
