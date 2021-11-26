@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap');
 
 @import 'scss/base/config'; 
+@import 'scss/config/_mediaQueries';
 
 @import 'scss/layout/_header';
 @import 'scss/layout/_section';
-@import 'scss/config/_mediaQueries';
-@import 'scss/layout/_main-product';
-@import 'scss/layout/_product-desc';
+@import 'scss/layout/_container-product-img';
+@import 'scss/layout/_container-product-desc';
 
 
 
