@@ -33,3 +33,10 @@
     text-decoration-line: line-through;
     color: map-get($color , c-dark-grayish-blue );
 }
+.product-amount {
+    display: flex;
+    align-items: center;
+    .input-amount {
+        margin: 0 20px 0 20px;
+    }
+}

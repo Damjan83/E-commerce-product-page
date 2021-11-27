@@ -1,0 +1,6 @@
+.btn__minus, .btn__plus {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: map-get($color , c-white);
+}

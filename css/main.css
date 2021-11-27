@@ -102,6 +102,18 @@ ul li {
   text-decoration-line: line-through;
   color: #68707d; }
 
+.product-amount {
+  display: flex;
+  align-items: center; }
+  .product-amount .input-amount {
+    margin: 0 20px 0 20px; }
+
+.btn__minus, .btn__plus {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: #fff; }
+
 html {
   box-sizing: border-box;
   font-size: 16px; }
