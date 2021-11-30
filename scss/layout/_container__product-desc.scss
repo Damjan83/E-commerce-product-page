@@ -1,8 +1,8 @@
-.container-product-desc {
+.container__product-main {
     width: 45%;
     height: auto;
 }
-.product-headline {
+.container__product-headline {
     p {
         color: map-get($color , c-orange);
     }
@@ -10,11 +10,11 @@
         font-size: 2.5em;
     }
 }
-.product-desc {
+.container__product-desc {
     font-size: 0.875em;
     color: map-get($color , c-dark-grayish-blue);
 }
-.product-price {
+.container__product-price {
     display: flex;
     align-items: center;
     p {
@@ -29,11 +29,11 @@
     }
     
 }
-.product-old-price {
+.container__product-old-price {
     text-decoration-line: line-through;
     color: map-get($color , c-dark-grayish-blue );
 }
-.product-amount {
+.container__product-amount {
     display: flex;
     align-items: center;
     .input-amount {

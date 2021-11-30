@@ -1,4 +1,4 @@
-.container-product-img {
+.container__product {
     width: 45%;
     height: auto;
 }
@@ -11,7 +11,7 @@
 .mySlide.active {
     display: block;
 }
-.mySlide-thumnails {
+.container__thumbnails {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;

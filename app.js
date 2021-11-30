@@ -1,13 +1,10 @@
-const mySlide = document.querySelectorAll('.mySlide');
-const slideActive = document.querySelector('.img-thumbnails-2');
+const slideActive = document.querySelectorAll('.thumb');
+for(let i = 0; i < slideActive.length; i++){
+    slideActive[i].addEventListener('click' , () => {
+        const thumb = 'container__thumbnails-img-' + [i+1].slice(-1);
+        const thumbImg = thumb.slice(-1);
+        document.querySelector('.product').src = './images/image-product-' + thumbImg + '.jpg';       
+    });
+};
 
-
-slideActive.addEventListener('click', function() {
-    const test = document.querySelector('.mySlide.active');
-    const testImg = test.querySelector('IMG');
-
-    testImg.src = './images/image-product-2.jpg';
-
-    console.log(testImg)
-});
 

@@ -51,7 +51,7 @@ ul li {
   margin: 0 auto;
   margin-top: 50px; }
 
-.container-product-img {
+.container__product {
   width: 45%;
   height: auto; }
 
@@ -63,49 +63,49 @@ ul li {
 .mySlide.active {
   display: block; }
 
-.mySlide-thumnails {
+.container__thumbnails {
   display: flex;
   justify-content: space-between;
   margin-top: 15px; }
-  .mySlide-thumnails img {
+  .container__thumbnails img {
     border-radius: 0.625rem;
     width: 90px;
     height: auto; }
 
-.container-product-desc {
+.container__product-main {
   width: 45%;
   height: auto; }
 
-.product-headline p {
+.container__product-headline p {
   color: #ff7d1a; }
 
-.product-headline h1 {
+.container__product-headline h1 {
   font-size: 2.5em; }
 
-.product-desc {
+.container__product-desc {
   font-size: 0.875em;
   color: #68707d; }
 
-.product-price {
+.container__product-price {
   display: flex;
   align-items: center; }
-  .product-price p {
+  .container__product-price p {
     font-weight: 700;
     margin-right: 1rem; }
-  .product-price span {
+  .container__product-price span {
     font-size: 0.625em;
     padding: 0.125rem;
     color: #ff7d1a;
     background-color: #ffede0; }
 
-.product-old-price {
+.container__product-old-price {
   text-decoration-line: line-through;
   color: #68707d; }
 
-.product-amount {
+.container__product-amount {
   display: flex;
   align-items: center; }
-  .product-amount .input-amount {
+  .container__product-amount .input-amount {
     margin: 0 20px 0 20px; }
 
 .btn__minus, .btn__plus {
