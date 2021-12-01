@@ -36,40 +36,44 @@
         </div>
         <!--Thumbnail images-->
         <div class="container__thumbnails">
-          <div class="thumb container__thumbnails-img-1">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail">
+          <div class="container__thumbnails-img-1">
+            <img src="./images/image-product-1-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
-          <div class="thumb container__thumbnails-img-2">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail">
+          <div class="container__thumbnails-img-2">
+            <img src="./images/image-product-2-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
-          <div class="thumb container__thumbnails-img-3">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail">
+          <div class="container__thumbnails-img-3">
+            <img src="./images/image-product-3-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
-          <div class="thumb container__thumbnails-img-4">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail">
+          <div class="container__thumbnails-img-4">
+            <img src="./images/image-product-4-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
         </div>
       </div>
       <div class="container__product-main">
         <div class="container__product-headline">
-          <p>Sneaker commpany</p>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="container__product-headline--top">Sneaker commpany</p>
+          <h1 class="container__product-headline--bottom">Fall Limited Edition Sneakers</h1>
         </div>
         <div class="container__product-desc">
-          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <p class="container__product-desc--body">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
         </div>
         <div class="container__product-price">
-          <p>$125.00</p>
-          <span>50%</span>
+          <p class="container__product-price--new">$125.00</p>
+          <span class="container__product-price--percent">50%</span>
         </div>
-        <div class="container__product-old-price">
-          <p>$250</p>
+        <div class="container__product-price-regular">
+          <p class="container__product-price--old">$250.00</p>
         </div>
         <div class="container__product-amount">
+          <div class="container__product-input">
           <button class="btn__minus"><img src="./images/icon-minus.svg"></button>
-          <div class="input__amount">0</div>
+          <div class="container__input-amount">0</div>
           <button class="btn__plus"><img src="./images/icon-plus.svg"></button>
-          <button class="btn__add-to-cart"><img src="./images/icon-cart.svg">Add to cart</button>
+          </div>
+          <button class="btn__add-to-cart">
+            <img class="btn__add-to-cart-img" src="./images/icon-cart.svg">Add to cart
+          </button>
         </div>
       </div>
     </section>

@@ -2,22 +2,25 @@
     width: 45%;
     height: auto;
 }
-.mySlide {
-    display: none;
-    img {
-        border-radius: 0.625rem;
-    }
+.container__product-img {  
+    border-radius: 0.625rem;   
 }
-.mySlide.active {
-    display: block;
+.product {
+    border-radius: 0.625rem;
 }
 .container__thumbnails {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
-    img {
+    margin-top: 0.938rem;
+}
+.thumb-img {
+    border-radius: 0.625rem;
+    width: 5.625rem;
+    height: auto;
+    &.is-active {
+        border: 2px solid map-get($color , c-orange);
         border-radius: 0.625rem;
-        width: 90px;
-        height: auto;
-    }
+        opacity: 0.5;
+    } 
+  
 }

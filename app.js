@@ -1,10 +1,13 @@
-const slideActive = document.querySelectorAll('.thumb');
-for(let i = 0; i < slideActive.length; i++){
-    slideActive[i].addEventListener('click' , () => {
-        const thumb = 'container__thumbnails-img-' + [i+1].slice(-1);
+const thumbActive = document.querySelectorAll('.thumb-img');
+for(let i = 0; i < thumbActive.length; i++){
+    thumbActive[i].addEventListener('click' , () => { 
+        const thumb = 'container__thumbnails-img-' + [i+1];
         const thumbImg = thumb.slice(-1);
-        document.querySelector('.product').src = './images/image-product-' + thumbImg + '.jpg';       
+        document.querySelector('.product').src = './images/image-product-' + thumbImg + '.jpg';
+        thumbActive[i].classList.add('is-active');  
     });
+   
+  
 };
 
 
