@@ -22,7 +22,8 @@
   margin-right: 10px; }
 
 .header {
-  width: 80%;
+  width: 100%;
+  max-width: 70%;
   height: auto;
   margin: 0 auto;
   display: flex;
@@ -35,18 +36,21 @@
   .menu ul {
     height: 100%;
     display: flex; }
-  .menu img {
-    margin-right: 50px; }
+
+.menu__logo {
+  margin-right: 80px; }
 
 ul li {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: 30px; }
   ul li a {
-    margin-right: 10px;
     text-decoration: none;
     color: #68707d; }
     ul li a:hover {
       color: #1d2025; }
+  ul li:last-child {
+    margin: 0; }
 
 .menu ul li:hover {
   border-bottom: 2px solid #ff7d1a; }
@@ -68,7 +72,8 @@ ul li {
 .container {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  max-width: 100%;
+  width: 65%;
   height: auto;
   margin: 0 auto;
   margin-top: 50px; }
@@ -107,19 +112,20 @@ ul li {
   margin-top: 4rem; }
 
 .container__product-headline--top {
+  font-size: 1.2em;
   color: #ff7d1a; }
 
 .container__product-headline--bottom {
-  font-size: 2.5em;
+  font-size: 3em;
   margin-top: 1.25rem; }
 
 .container__product-desc {
   width: 100%;
   height: auto;
-  margin-top: 2.5rem; }
+  margin-top: 3rem; }
 
 .container__product-desc--body {
-  font-size: 0.875em;
+  font-size: 1.1em;
   line-height: 1.8;
   color: #68707d;
   padding-right: 1.125rem; }
@@ -127,15 +133,15 @@ ul li {
 .container__product-price {
   display: flex;
   align-items: center;
-  margin-top: 1.25rem; }
+  margin-top: 2rem; }
 
 .container__product-price--new {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-right: 1rem; }
 
 .container__product-price--percent {
-  font-size: 0.625em;
+  font-size: 0.925em;
   padding: 0.125rem;
   color: #ff7d1a;
   background-color: #ffede0; }
@@ -144,12 +150,15 @@ ul li {
   text-decoration-line: line-through;
   color: #68707d;
   font-size: 0.725em;
-  margin-top: 0.625rem; }
+  margin-top: 1.5rem; }
+
+.container__product-price--old {
+  font-size: 1.3em; }
 
 .container__product-amount {
   display: flex;
   align-items: center;
-  margin-top: 2.188rem;
+  margin-top: 4rem;
   justify-content: space-between; }
 
 .container__product-input {
@@ -158,9 +167,6 @@ ul li {
 
 .container__input-amount {
   margin: 0 1.875rem; }
-
-.btn__add-to-cart-img {
-  margin-right: 10px; }
 
 html {
   box-sizing: border-box;

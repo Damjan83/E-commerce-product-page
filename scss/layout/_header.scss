@@ -1,5 +1,6 @@
 .header {
-    width: 80%;
+    width: 100%;
+    max-width: 70%;
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -14,20 +15,23 @@
         height: 100%;
         display: flex;
     }
-    img {
-        margin-right: 50px;
-    }
+}
+.menu__logo {
+    margin-right: 80px;
 }
 ul li {
     display: flex;
     align-items: center;
+    margin-right: 30px;
     a {
-        margin-right: 10px;
         text-decoration: none;
         color: map-get($color, c-dark-grayish-blue);
         &:hover {
             color: map-get($color, c-vark-blue);
         }
+    }
+    &:last-child {
+        margin: 0;
     }
 }
 .menu ul li:hover {
