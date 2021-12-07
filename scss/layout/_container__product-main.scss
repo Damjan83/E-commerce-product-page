@@ -8,11 +8,13 @@
     margin-top: 4rem;
 }
 .container__product-headline--top {
-    font-size: 1.2em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
     color: map-get($color , c-orange);
 }
 .container__product-headline--bottom {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-top: 1.25rem;
 }
 .container__product-desc {
@@ -21,8 +23,8 @@
     margin-top: 3rem;
 }
 .container__product-desc--body {
-    font-size: 1.1em;
-    line-height: 1.8;
+    font-size: 0.9375em;
+    line-height: 1.6;
     color: map-get($color , c-dark-grayish-blue);
     padding-right: 1.125rem;
 }
@@ -47,7 +49,7 @@
     text-decoration-line: line-through;
     color: map-get($color , c-dark-grayish-blue );
     font-size: 0.725em;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 .container__product-price--old {
     font-size: 1.3em;
@@ -55,7 +57,7 @@
 .container__product-amount {
     display: flex;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2.3125rem;
     justify-content: space-between;
 
 }

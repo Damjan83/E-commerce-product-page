@@ -1,4 +1,8 @@
 const thumbActive = document.querySelectorAll('.thumb-img');
+const modalActive = document.querySelector('.container__product-img');
+const modal = document.querySelector('.modal');
+const productModal = document.querySelector('.container__product-modal');
+
 
 for(let i = 0; i < thumbActive.length; i++){
     thumbActive[i].addEventListener('click' , (e) => { 
@@ -16,3 +20,7 @@ for(let i = 0; i < thumbActive.length; i++){
 };
 
 
+modalActive.addEventListener('click', () => {
+    modal.style.display = 'block';
+    productModal.style.display = 'block';
+});
