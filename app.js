@@ -9,7 +9,9 @@ const modalActiveImg = document.querySelector('.container__product-modal-img');
 const btnPrevious = document.querySelector('.btn__previous');
 const btnNext = document.querySelector('.btn__next');
 
-let i = 0;
+const btnClose = document.querySelector('.icon__close');
+
+
 
 for(let i = 0; i < thumbActive.length; i++){
     thumbActive[i].addEventListener('click' , (e) => { 
@@ -40,23 +42,32 @@ for(let i = 0; i < thumbActiveModal.length; i++){
 
 };
 
+let i = 0;
 btnPrevious.addEventListener('click' , () => {
-    if(i <= 0)
+    if(i <= 0) 
         i = thumbActiveModal.length;
         i--;
-    return setImg(); 
+        thumbActiveModal.forEach((i) => {
+            i.classList.remove('is-active');
+        });
+        thumbActiveModal[i].classList.add('is-active');
+        return setImg();
 });
 
 btnNext.addEventListener('click' , () => {
     if(i >= thumbActiveModal.length - 1 ) 
         i = -1;    
         i++;
+        thumbActiveModal.forEach((i) => {
+            i.classList.remove('is-active');
+        });
+        thumbActiveModal[i].classList.add('is-active');
         return setImg();     
 });
 
  function setImg() {
-    const thumbBtnActive = 'container__thumbnails-img-' + [i+1];
-    const thumbBtnImg = thumbBtnActive.slice(-1);
-    return document.querySelector('.productImg').src = './images/image-product-' + thumbBtnImg + '.jpg';
+    const setBtnActive = 'container__thumbnails-img-' + [i+1];
+    const setBtnImg = setBtnActive.slice(-1);
+    return document.querySelector('.productImg').src = './images/image-product-' + setBtnImg + '.jpg';
  }
  
