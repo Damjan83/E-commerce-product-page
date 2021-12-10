@@ -11,6 +11,9 @@ const btnNext = document.querySelector('.btn__next');
 
 const btnClose = document.querySelector('.icon__close');
 
+const btnMinus = document.querySelector('.btn__minus');
+const btnPlus = document.querySelector('.btn__plus');
+const inputAmount = document.querySelector('.container__input-amount');
 
 
 for(let i = 0; i < thumbActive.length; i++){
@@ -28,6 +31,22 @@ modalActive.addEventListener('click', () => {
     modal.style.display = 'block';
     productModal.style.display = 'block';
 });
+
+/*------btn plus and minus------*/
+let app = { currentValue: 0};
+inputAmount.innerHTML = formatNumber(0);
+btnPlus.addEventListener('click' , () => {
+    const currentAmount = formatNumber(app.currentValue += 1);
+    inputAmount.innerHTML  = currentAmount;
+});
+btnMinus.addEventListener('click' , () => {
+    const currentAmount = formatNumber(app.currentValue -= 1);
+  
+    inputAmount.innerHTML  = currentAmount;
+    
+});
+
+
 /*------Lightbox modal------*/
 for(let i = 0; i < thumbActiveModal.length; i++){
     thumbActiveModal[i].addEventListener('click' , (e) => { 
@@ -41,7 +60,7 @@ for(let i = 0; i < thumbActiveModal.length; i++){
     });
 
 };
-
+/*------btn previous and next------*/
 let i = 0;
 btnPrevious.addEventListener('click' , () => {
     if(i <= 0) 
@@ -71,3 +90,7 @@ btnNext.addEventListener('click' , () => {
     return document.querySelector('.productImg').src = './images/image-product-' + setBtnImg + '.jpg';
  }
  
+
+ function formatNumber(num){
+    return num.toLocaleString('en-US');
+};

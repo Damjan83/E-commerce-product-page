@@ -3,6 +3,7 @@
     align-items: center;
     border: none;
     background-color: map-get($color , c-white);
+    cursor: pointer;
 }
 .btn__add-to-cart {
     width: 100%;
@@ -16,9 +17,9 @@
     align-items: center;
     justify-content: center;
     color: map-get($color , c-white);
-    &--img {
-        margin-right: 10px;
-    }
+}
+.btn__add-to-cart-img {
+    margin-right: 10px;
 }
 
 .btn__previous, .btn__next {
