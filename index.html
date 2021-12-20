@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="container__product-main">
+      <div class="container__product-main"> 
         <div class="container__product-headline">
           <p class="container__product-headline--top">Sneaker commpany</p>
           <h1 class="container__product-headline--bottom">Fall Limited Edition Sneakers</h1>
@@ -72,21 +72,31 @@
           <button class="btn__plus"><img src="./images/icon-plus.svg"></button>
           </div>
           <button class="btn__add-to-cart">
-            <img class="btn__add-to-cart-img" src="./images/icon-cart.svg">Add to cart
+            <img class="btn__add-to-cart--img" src="./images/icon-cart.svg">Add to cart
           </button>
         </div>
       </div>
     </section>
     <div class="modal"></div>
     <div class="icon__close">
-      <div class="icon__close-line1 icon__close-line"></div>
-      <div class="icon__close-line2 icon__close-line"></div>
-    </div>
+      <div class="icon__close--line1 icon__close--line"></div>
+      <div class="icon__close--line2 icon__close--line"></div>
+    </div>     
     <div class="container__product-modal">
       <!--<img src="./images/icon-close.svg" alt="close">-->     
       <div class="container__product-modal-img">
-        <button class="btn btn__previous"><img class="img__previous" src="./images/icon-previous.svg"  alt="previous"></button>
-        <button class="btn btn__next"><img class="img__next" src="./images/icon-next.svg"  alt="next"></button>   
+        <button class="btn btn--previous">
+          <div class="icon__previous">
+            <div class="icon__previous--line1 icon__previous--line"></div>
+            <div class="icon__previous--line2 icon__previous--line"></div>
+          </div> 
+        </button>
+        <button class="btn btn--next">
+          <div class="icon__next">
+            <div class="icon__next--line1 icon__next--line"></div>
+            <div class="icon__next--line2 icon__next--line"></div>
+          </div> 
+        </button>   
         <img src="./images/image-product-1.jpg" class="productImg" alt="sneakers">
       </div>
 
@@ -106,9 +116,6 @@
         </div>
       </div>
     </div>
-  
- 
-
   <script src="app.js"></script>
 </body>
 </html>

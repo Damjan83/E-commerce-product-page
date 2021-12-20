@@ -2,22 +2,26 @@ const thumbActive = document.querySelectorAll('.thumb-img');
 const modalActive = document.querySelector('.container__product-img');
 const modal = document.querySelector('.modal');
 const productModal = document.querySelector('.container__product-modal');
-
 const thumbActiveModal = document.querySelectorAll('.thumb-img-modal');
 const modalActiveImg = document.querySelector('.container__product-modal-img');
 
-const btnPrevious = document.querySelector('.btn__previous');
-const btnNext = document.querySelector('.btn__next');
+const btnPrevious = document.querySelector('.btn--previous');
+const btnNext = document.querySelector('.btn--next');
 
 const btnClose = document.querySelector('.icon__close');
+const lightboxModal = document.querySelector('.modal');
+const containerModal = document.querySelector('.container__product-modal');
 
 const btnMinus = document.querySelector('.btn__minus');
 const btnPlus = document.querySelector('.btn__plus');
 const inputAmount = document.querySelector('.container__input-amount');
 
 
+const ccPr = document.querySelector('.container__product');
+const prImg = ccPr.querySelector('.container__product-img');
+
 for(let i = 0; i < thumbActive.length; i++){
-    thumbActive[i].addEventListener('click' , (e) => { 
+    thumbActive[i].addEventListener('click' , () => { 
         const thumb = 'container__thumbnails-img-' + [i+1];
         const thumbImg = thumb.slice(-1);
         document.querySelector('.product').src = './images/image-product-' + thumbImg + '.jpg';
@@ -42,8 +46,12 @@ btnPlus.addEventListener('click' , () => {
 btnMinus.addEventListener('click' , () => {
     const currentAmount = formatNumber(app.currentValue -= 1);
   
-    inputAmount.innerHTML  = currentAmount;
-    
+    if(app.currentValue < 0) {
+        return;
+        
+    }else {
+        inputAmount.innerHTML  = currentAmount;
+    }   
 });
 
 
@@ -60,7 +68,7 @@ for(let i = 0; i < thumbActiveModal.length; i++){
     });
 
 };
-/*------btn previous and next------*/
+/*------lightbox btn previous and next------*/
 let i = 0;
 btnPrevious.addEventListener('click' , () => {
     if(i <= 0) 
@@ -89,7 +97,15 @@ btnNext.addEventListener('click' , () => {
     const setBtnImg = setBtnActive.slice(-1);
     return document.querySelector('.productImg').src = './images/image-product-' + setBtnImg + '.jpg';
  }
- 
+
+ btnClose.addEventListener('click' , () => {
+    containerModal.style.display = 'none';
+    lightboxModal.style.display = 'none';
+ });
+ lightboxModal.addEventListener('click' , () => {
+    containerModal.style.display = 'none';
+    lightboxModal.style.display = 'none';
+ });
 
  function formatNumber(num){
     return num.toLocaleString('en-US');

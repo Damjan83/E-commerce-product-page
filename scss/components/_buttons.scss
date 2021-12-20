@@ -17,12 +17,11 @@
     align-items: center;
     justify-content: center;
     color: map-get($color , c-white);
+        &--img {
+        margin-right: 10px;
+    }
 }
-.btn__add-to-cart-img {
-    margin-right: 10px;
-}
-
-.btn__previous, .btn__next {
+.btn {
     position: absolute;
     top: 43%;
     width: 3rem;
@@ -31,14 +30,14 @@
     border: none;
     padding: 15px;
     cursor: pointer;
+    &--previous {
+        left: -4.5%;
+    }
+    &--next {
+        right: -4.5%;
+    }
 }
 
-.btn__previous {
-    left: -4.5%;
-}
-.btn__next {
-    right: -4.5%;
-}
 /*------icon close------*/
 .icon__close {
     position: absolute;
@@ -46,21 +45,67 @@
     left: 61.7%;
     display: block;
     cursor: pointer; 
- }
-  
-.icon__close-line {
-    width: 20px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
-    transition: all 0.4s ease; 
-  
-}
-  
-.icon__close-line1 {
-    transform: rotate(-45deg) translate(0px, 6px); 
-}
-.icon__close-line2 {
-    transform: rotate(45deg) translate(0px, -6px); 
-}
 
+    &:hover > * {
+        background-color: map-get($color , c-orange );
+    }
+    &--line {
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        transition: all 0.4s ease;
+    }
+    &--line1 {
+        transform: rotate(-45deg) translate(0px, 6px); 
+    }
+    &--line2 {
+        transform: rotate(45deg) translate(0px, -6px); 
+    }
+}
+/*------icon previous and next------*/
+.icon__previous {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer; 
+    &--line {
+        width: 13px;
+        height: 3px;
+        background-color: map-get($color , c-black);
+    }
+    &:hover > * {
+        background-color: map-get($color , c-orange );
+    }
+    &--line1 {
+        transform: rotate(-45deg) translate(3px, 0px); 
+    }
+    &--line2 {
+        transform: rotate(45deg) translate(3px, 0px); 
+    }   
+}
+.icon__next {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer; 
+    align-items: flex-end;
+    &--line {
+        width: 13px;
+        height: 3px;
+        background-color: map-get($color , c-black);
+    }
+    &:hover > * {
+        background-color: map-get($color , c-orange );
+    }
+    &--line1 {
+        transform: rotate(45deg) translate(-3px, 0px); 
+    }
+    &--line2 {
+        transform: rotate(-45deg) translate(-3px, 0px); 
+    }  
+}
