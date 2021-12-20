@@ -12,10 +12,12 @@ const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
 const containerModal = document.querySelector('.container__product-modal');
 
+const cart = document.querySelector('.cart');
+const cartModal = document.querySelector('.cart__modal');
+
 const btnMinus = document.querySelector('.btn__minus');
 const btnPlus = document.querySelector('.btn__plus');
 const inputAmount = document.querySelector('.container__input-amount');
-
 
 const ccPr = document.querySelector('.container__product');
 const prImg = ccPr.querySelector('.container__product-img');
@@ -110,3 +112,7 @@ btnNext.addEventListener('click' , () => {
  function formatNumber(num){
     return num.toLocaleString('en-US');
 };
+/*------cart modal------*/
+cart.addEventListener('click' , () => {
+    cartModal.style.display = 'block';
+});
