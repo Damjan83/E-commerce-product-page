@@ -1,0 +1,33 @@
+.main-nav__burger {
+    display: block;
+    cursor: pointer;
+    @include for-size(phone-large) {    
+        display: none; 
+     }
+}
+.main-nav__burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: map-get($color, c-black);
+    margin: 5px;
+    transition: all 0.4s ease;
+}
+.main-nav__burger-line1{
+    .is-active & {
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+}
+.main-nav__burger-line2{
+    .is-active & {
+        opacity: 0;
+    }
+}
+.main-nav__burger-line3{
+    .is-active & {
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

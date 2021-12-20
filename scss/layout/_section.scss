@@ -1,9 +1,12 @@
 .container {
-    display: flex;
+    display: block;
     justify-content: space-between;
     max-width: 100%;
     width: 55%;
     height: auto;
     margin: 0 auto;
     margin-top: 50px;
+    @include for-size(phone-large) {
+        display: flex;
+    }
 }

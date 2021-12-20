@@ -1,3 +1,6 @@
+//const burger = document.querySelector('.main-nav__burger');
+//const nav = document.querySelector('.main-nav__menu');
+
 const thumbActive = document.querySelectorAll('.thumb-img');
 const modalActive = document.querySelector('.container__product-img');
 const modal = document.querySelector('.modal');
@@ -21,6 +24,13 @@ const inputAmount = document.querySelector('.container__input-amount');
 
 const ccPr = document.querySelector('.container__product');
 const prImg = ccPr.querySelector('.container__product-img');
+
+
+/*------Burger and mobile menu------*/
+/*burger.addEventListener('click' , () => {
+    nav.classList.toggle('is-active');
+    burger.classList.toggle('is-active');
+});*/
 
 for(let i = 0; i < thumbActive.length; i++){
     thumbActive[i].addEventListener('click' , () => { 
