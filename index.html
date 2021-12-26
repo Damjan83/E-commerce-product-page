@@ -8,22 +8,23 @@
 </head>
 <body>
   <div class="header">  
-    <div class="menu">
+    <div class="main__nav">
       <div class="main-nav__burger">
         <div class="main-nav__burger-line1 main-nav__burger-line"></div>
         <div class="main-nav__burger-line2 main-nav__burger-line"></div>
         <div class="main-nav__burger-line3 main-nav__burger-line"></div>
-    </div>
+      </div>
       <div class="menu__logo">
         <img src="./images/logo.svg" alt="logo">
       </div>    
       <ul class="main-nav__menu">
-        <li><a href="#Collections">Collections</a></li>
-        <li><a href="#Men">Men</a></li>
-        <li><a href="#Women">Women</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
+        <li class="main-nav__menu-item">
+          <a class="main-nav__menu-link" href="#Collections">Collections</a>
+          <a class="main-nav__menu-link" href="#Men">Men</a>                
+          <a class="main-nav__menu-link" href="#Women">Women</a>
+          <a class="main-nav__menu-link" href="#About">About</a>
+          <a class="main-nav__menu-link" href="#Contact">Contact</a>
+      </li>
     </div>
     <div class="menu-1">
       <div class="cart">
@@ -98,12 +99,12 @@
         </div>
       </div>
     </section>
-    <div class="modal"></div>
-    <div class="icon__close">
-      <div class="icon__close--line1 icon__close--line"></div>
-      <div class="icon__close--line2 icon__close--line"></div>
-    </div>     
+    <div class="modal"></div>       
     <div class="container__product-modal">
+      <div class="icon__close">
+        <div class="icon__close--line1 icon__close--line"></div>
+        <div class="icon__close--line2 icon__close--line"></div>
+      </div> 
       <!--<img src="./images/icon-close.svg" alt="close">-->     
       <div class="container__product-modal-img">
         <button class="btn btn--previous">

@@ -1,3 +1,64 @@
+.main__nav {
+    display: flex;
+    align-items: center;
+    ul {
+        height: 100%;
+        display: flex;
+    }
+}
+.menu__logo {
+    min-width: 8.625rem;
+    margin-right: 5rem;
+}
+
+.main-nav__menu-item {
+    display: flex;
+    align-items: center;
+    &:last-child {
+        margin: 0;
+    }
+}
+.main-nav__menu-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    text-decoration: none;
+    margin-right: 30px;
+    color: map-get($color, c-dark-grayish-blue);
+    &:hover {
+        color: map-get($color, c-vark-blue);
+        border-bottom: 2px solid map-get($color, c-orange);
+    }
+}
+
+.main-nav__menu {
+    width: 100%;
+    display: none;
+    animation: fadeIn 0.7s;
+    position: relative;
+    &.is-active {
+        position: absolute;
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        background-color: map-get($color, c-white);
+        top: 100px;
+        text-align: left;
+        display: flex;
+        @include for-size(phone-large) {    
+            display: none; 
+            z-index: 1;
+        }   
+    }
+    @include for-size(phone-large) {    
+        display: flex; 
+        justify-content: flex-end;
+    }
+}
+
+
+
 .main-nav__burger {
     display: block;
     cursor: pointer;

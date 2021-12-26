@@ -7,36 +7,6 @@
     justify-content: space-between;
     border-bottom: 1px solid map-get($color, c-grayish-blue);
 }
-
-.menu {
-    display: flex;
-    align-items: center;
-    ul {
-        height: 100%;
-        display: flex;
-    }
-}
-.menu__logo {
-    margin-right: 80px;
-}
-ul li {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    a {
-        text-decoration: none;
-        color: map-get($color, c-dark-grayish-blue);
-        &:hover {
-            color: map-get($color, c-vark-blue);
-        }
-    }
-    &:last-child {
-        margin: 0;
-    }
-}
-.menu ul li:hover {
-    border-bottom: 2px solid map-get($color, c-orange);
-}
 .menu-1 {
     display: flex;
     align-items: center;

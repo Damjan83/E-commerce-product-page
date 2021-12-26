@@ -50,8 +50,8 @@
 /*------icon close------*/
 .icon__close {
   position: absolute;
-  top: 7%;
-  left: 61.7%;
+  top: -8%;
+  right: 0;
   display: block;
   cursor: pointer; }
   .icon__close:hover > * {
@@ -104,6 +104,58 @@
   .icon__next--line2 {
     transform: rotate(-45deg) translate(-3px, 0px); }
 
+.main__nav {
+  display: flex;
+  align-items: center; }
+  .main__nav ul {
+    height: 100%;
+    display: flex; }
+
+.menu__logo {
+  min-width: 8.625rem;
+  margin-right: 5rem; }
+
+.main-nav__menu-item {
+  display: flex;
+  align-items: center; }
+  .main-nav__menu-item:last-child {
+    margin: 0; }
+
+.main-nav__menu-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 30px;
+  color: #68707d; }
+  .main-nav__menu-link:hover {
+    color: #1d2025;
+    border-bottom: 2px solid #ff7d1a; }
+
+.main-nav__menu {
+  width: 100%;
+  display: none;
+  animation: fadeIn 0.7s;
+  position: relative; }
+  .main-nav__menu.is-active {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    top: 100px;
+    text-align: left;
+    display: flex; }
+    @media (min-width: 768px) {
+      .main-nav__menu.is-active {
+        display: none;
+        z-index: 1; } }
+  @media (min-width: 768px) {
+    .main-nav__menu {
+      display: flex;
+      justify-content: flex-end; } }
+
 .main-nav__burger {
   display: block;
   cursor: pointer; }
@@ -114,7 +166,7 @@
 .main-nav__burger-line {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   margin: 5px;
   transition: all 0.4s ease; }
 
@@ -141,31 +193,6 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #b6bcc8; }
-
-.menu {
-  display: flex;
-  align-items: center; }
-  .menu ul {
-    height: 100%;
-    display: flex; }
-
-.menu__logo {
-  margin-right: 80px; }
-
-ul li {
-  display: flex;
-  align-items: center;
-  margin-right: 30px; }
-  ul li a {
-    text-decoration: none;
-    color: #68707d; }
-    ul li a:hover {
-      color: #1d2025; }
-  ul li:last-child {
-    margin: 0; }
-
-.menu ul li:hover {
-  border-bottom: 2px solid #ff7d1a; }
 
 .menu-1 {
   display: flex;
