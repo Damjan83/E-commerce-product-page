@@ -16,8 +16,9 @@
     cursor: pointer;
 }
 .user-photo {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 100%;
+    max-width: 3.5rem;
+    height: auto;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     border: 2px solid transparent;

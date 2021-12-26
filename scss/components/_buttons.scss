@@ -45,6 +45,10 @@
     cursor: pointer;
     &--previous {
         left: -4.5%;
+        display: none;
+        @include for-size(phone-large) {    
+            display: block; 
+        } 
     }
     &--next {
         right: -4.5%;
