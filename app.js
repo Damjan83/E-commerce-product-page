@@ -6,7 +6,6 @@ const menuLink = document.querySelectorAll('.main-nav__menu-link');
 const thumbActive = document.querySelectorAll('.thumb-img');
 const modalActive = document.querySelector('.container__product-img');
 const modal = document.querySelector('.modal');
-const productModal = document.querySelector('.container__product-modal');
 const thumbActiveModal = document.querySelectorAll('.thumb-img-modal');
 const modalActiveImg = document.querySelector('.container__product-modal-img');
 
@@ -15,7 +14,7 @@ const btnNext = document.querySelector('.btn--next');
 
 const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
-const containerModal = document.querySelector('.container__product-modal');
+const containerModal = document.querySelector('.container__modal');
 
 const cart = document.querySelector('.cart');
 const cartModal = document.querySelector('.cart__modal');
@@ -38,7 +37,7 @@ burger.addEventListener('click' , () => {
     });
 });
 
-
+/*------Changing thumb img whit main img------*/
 for(let i = 0; i < thumbActive.length; i++){
     thumbActive[i].addEventListener('click' , () => { 
         const thumb = 'container__thumbnails-img-' + [i+1];
@@ -52,7 +51,7 @@ for(let i = 0; i < thumbActive.length; i++){
 };
 modalActive.addEventListener('click', () => {
     modal.style.display = 'block';
-    productModal.style.display = 'block';
+    containerModal.style.display = 'block';
 });
 
 /*------btn plus and minus------*/

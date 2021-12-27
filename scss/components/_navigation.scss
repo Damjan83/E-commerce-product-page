@@ -36,9 +36,6 @@
 .main-nav__menu-item {
     display: flex;
     align-items: center;
-    &:last-child {
-        margin: 0;
-    }
     &.is-active {
         height: 3.125rem;
         display: block;
