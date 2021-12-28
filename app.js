@@ -2,6 +2,7 @@ const burger = document.querySelector('.main-nav__burger');
 const nav = document.querySelector('.main-nav__menu');
 const menuItem = document.querySelector('.main-nav__menu-item');
 const menuLink = document.querySelectorAll('.main-nav__menu-link');
+const modalMob = document.querySelector('.modal__mob');
 
 const thumbActive = document.querySelectorAll('.thumb-img');
 const modalActive = document.querySelector('.container__product-img');
@@ -11,6 +12,8 @@ const modalActiveImg = document.querySelector('.container__product-modal-img');
 
 const btnPrevious = document.querySelector('.btn--previous');
 const btnNext = document.querySelector('.btn--next');
+const btnPreviousMob = document.querySelector('.btn--previous-mob');
+const btnNextMob = document.querySelector('.btn--next-mob');
 
 const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
@@ -35,6 +38,7 @@ burger.addEventListener('click' , () => {
     menuLink.forEach( (el) => {
         el.classList.toggle('is-active');
     });
+    modalMob.classList.toggle('is-active');
 });
 
 /*------Changing thumb img whit main img------*/
@@ -62,12 +66,12 @@ btnPlus.addEventListener('click' , () => {
     inputAmount.innerHTML  = currentAmount;
 });
 btnMinus.addEventListener('click' , () => {
-    const currentAmount = formatNumber(app.currentValue -= 1);
+    let currentAmount = 0;
   
-    if(app.currentValue < 0) {
+    if(app.currentValue <= 0) {
         return;
-        
     }else {
+        currentAmount = formatNumber(app.currentValue -= 1);
         inputAmount.innerHTML  = currentAmount;
     }   
 });
@@ -108,12 +112,29 @@ btnNext.addEventListener('click' , () => {
         thumbActiveModal[i].classList.add('is-active');
         return setImg();     
 });
-
- function setImg() {
+function setImg() {
     const setBtnActive = 'container__thumbnails-img-' + [i+1];
     const setBtnImg = setBtnActive.slice(-1);
     return document.querySelector('.productImg').src = './images/image-product-' + setBtnImg + '.jpg';
  }
+
+/*------ btn previous, btn next mob------*/
+
+btnPreviousMob.addEventListener('click' , () => {
+  
+});
+
+btnNextMob.addEventListener('click' , () => {
+    
+});
+function getIndex() {
+    const imgIndex = './images/image-product-' + [i+1];
+    const imgIndexNum = imgIndex.slice(-1);
+    return document.querySelector('.product').src = './images/image-product-' + imgNum + '.jpg';
+}
+ 
+
+
 
  btnClose.addEventListener('click' , () => {
     containerModal.style.display = 'none';
@@ -131,3 +152,9 @@ btnNext.addEventListener('click' , () => {
 cart.addEventListener('click' , () => {
     cartModal.style.display = 'block';
 });
+
+/*function setImgMob() {
+    const imgIndex = './images/image-product-' + [i+1];
+    const imgIndexNum = imgIndex.slice(-1);
+    return document.querySelector('.product').src = './images/image-product-' + imgIndexNum + '.jpg';
+}*/

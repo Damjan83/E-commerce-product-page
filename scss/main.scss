@@ -4,6 +4,8 @@
 @import 'scss/config/_mediaQueries';
 @import 'scss/components/_buttons';
 @import 'scss/components/_navigation';
+@import 'scss/components/_cart-modal';
+
 
 
 @import 'scss/layout/_header';
@@ -11,7 +13,6 @@
 @import 'scss/layout/_container__product';
 @import 'scss/layout/_container__product-main';
 @import 'scss/layout/_modal';
-@import 'scss/layout/_cart-modal';
 
 
 
@@ -37,3 +38,5 @@ body {
     font-size: 1em;
     font-family: 'Kumbh Sans' , sans-serif;
 }
+
+

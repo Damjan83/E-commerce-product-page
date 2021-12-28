@@ -41,23 +41,34 @@
 
 .btn {
     position: absolute;
-    top: 43%;
+    top: 40%;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     border: none;
     padding: 0.9375rem;
-    cursor: pointer;
-    &--previous {
-        left: -4.5%;
-        display: none;
-        @include for-size(phone-large) {    
-            display: block; 
+    cursor: pointer;   
+    @include for-size(phone-large) {
+        top: 43%;
+        &--previous {
+            left: -4.5%;
+        }
+        &--next {
+            right: -4.5%;
+        }
+    }
+    &--previous-mob {
+        left: 2.5%;
+        @include for-size(phone-large) {
+            display: none;
+        }       
+    }
+    &--next-mob {
+        right: 2.5%;
+        @include for-size(phone-large) {
+            display: none;
         } 
-    }
-    &--next {
-        right: -4.5%;
-    }
+    }   
 }
 
 /*------icon close------*/
