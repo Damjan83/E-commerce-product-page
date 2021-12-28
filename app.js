@@ -84,7 +84,6 @@ for(let i = 0; i < thumbActiveModal.length; i++){
         });
         thumbActiveModal[i].classList.add('is-active');
     });
-
 };
 /*------lightbox btn previous and next------*/
 let i = 0;
