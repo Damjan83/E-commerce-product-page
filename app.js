@@ -5,10 +5,12 @@ const menuLink = document.querySelectorAll('.main-nav__menu-link');
 const modalMob = document.querySelector('.modal__mob');
 
 const thumbActive = document.querySelectorAll('.thumb-img');
-const modalActive = document.querySelector('.container__product-img');
+const containerProductImgActive = document.querySelector('.container__product-img');
+const product = containerProductImgActive.querySelector('.product');
+
 const modal = document.querySelector('.modal');
 const thumbActiveModal = document.querySelectorAll('.thumb-img-modal');
-const modalActiveImg = document.querySelector('.container__product-modal-img');
+//const modalActiveImg = document.querySelector('.container__product-modal-img');
 
 const btnPrevious = document.querySelector('.btn--previous');
 const btnNext = document.querySelector('.btn--next');
@@ -26,8 +28,11 @@ const btnMinus = document.querySelector('.btn__minus');
 const btnPlus = document.querySelector('.btn__plus');
 const inputAmount = document.querySelector('.container__input-amount');
 
-const ccPr = document.querySelector('.container__product');
-const prImg = ccPr.querySelector('.container__product-img');
+
+const thumbContainer = document.querySelector('.container__thumbnails');
+const thumbContainerImages = thumbContainer.children.length;
+
+
 
 
 /*------Burger and mobile menu------*/
@@ -53,7 +58,7 @@ for(let i = 0; i < thumbActive.length; i++){
         thumbActive[i].classList.add('is-active');
     });
 };
-modalActive.addEventListener('click', () => {
+containerProductImgActive.addEventListener('click', () => {
     modal.style.display = 'block';
     containerModal.style.display = 'block';
 });
@@ -89,6 +94,7 @@ for(let i = 0; i < thumbActiveModal.length; i++){
         thumbActiveModal[i].classList.add('is-active');
     });
 };
+
 /*------lightbox btn previous and next------*/
 let i = 0;
 btnPrevious.addEventListener('click' , () => {
@@ -118,22 +124,37 @@ function setImg() {
     return document.querySelector('.productImg').src = './images/image-product-' + setBtnImg + '.jpg';
  }
 
+
 /*------ btn previous, btn next mob------*/
 
-btnPreviousMob.addEventListener('click' , () => {
-  
+
+btnPreviousMob.addEventListener('click' , () => {   
+    const currentActiveAttr = product.dataset.active;   
+    let getImgIndex = currentActiveAttr; 
+    if(getImgIndex <= 1){ 
+        getImgIndex = 4;
+    }else {
+        getImgIndex--;
+    }   
+    product.src = './images/image-product-' + getImgIndex + '.jpg';
+    product.setAttribute("data-active",getImgIndex); 
 });
 
 btnNextMob.addEventListener('click' , () => {
-    
+    const currentActiveAttr = product.dataset.active;   
+    let getImgIndex = currentActiveAttr; 
+    if(getImgIndex >= 4){ 
+        getImgIndex = 1;
+    }else {
+        getImgIndex++;
+    }   
+    product.src = './images/image-product-' + getImgIndex + '.jpg';
+    product.setAttribute("data-active",getImgIndex); 
 });
-function getIndex() {
-    const imgIndex = './images/image-product-' + [i+1];
-    const imgIndexNum = imgIndex.slice(-1);
-    return document.querySelector('.product').src = './images/image-product-' + imgNum + '.jpg';
-}
- 
 
+ 
+     
+ 
 
 
  btnClose.addEventListener('click' , () => {

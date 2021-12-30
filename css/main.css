@@ -46,11 +46,13 @@
   cursor: pointer; }
   @media (min-width: 768px) {
     .btn {
-      top: 43%; }
-      .btn--previous {
-        left: -4.5%; }
-      .btn--next {
-        right: -4.5%; } }
+      top: 43%; } }
+  @media (min-width: 768px) {
+    .btn--previous {
+      left: -4.5%; } }
+  @media (min-width: 768px) {
+    .btn--next {
+      right: -4.5%; } }
   .btn--previous-mob {
     left: 2.5%; }
     @media (min-width: 768px) {
@@ -196,15 +198,13 @@
   transition: all 0.4s ease; }
 
 .is-active .main-nav__burger-line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-  background-color: #68707d; }
+  transform: rotate(-45deg) translate(-5px, 6px); }
 
 .is-active .main-nav__burger-line2 {
   opacity: 0; }
 
 .is-active .main-nav__burger-line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-  background-color: #68707d; }
+  transform: rotate(45deg) translate(-5px, -6px); }
 
 @keyframes fadeIn {
   from {
@@ -258,7 +258,7 @@
   @media (min-width: 768px) {
     .header {
       border-bottom: 1px solid #b6bcc8;
-      max-width: 61%; } }
+      max-width: 62rem; } }
 
 .menu-1 {
   display: flex;
@@ -297,7 +297,8 @@
   @media (min-width: 768px) {
     .container {
       display: flex;
-      width: 55%;
+      width: 100%;
+      max-width: 62rem;
       margin-top: 50px; } }
 
 .container__product {
@@ -441,7 +442,8 @@
   padding: 0 1.25rem; }
   @media (min-width: 768px) {
     .container__product-input {
-      display: flex; } }
+      display: flex;
+      margin-bottom: 0; } }
 
 .container__input-amount {
   margin: 0 1.875rem; }

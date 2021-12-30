@@ -112,6 +112,7 @@
     padding: 0 1.25rem;
     @include for-size(phone-large) {
         display: flex;
+        margin-bottom: 0;
     }
 }
 

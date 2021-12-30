@@ -6,7 +6,7 @@
     justify-content: space-between;
         @include for-size(phone-large) {
         border-bottom: 1px solid map-get($color, c-grayish-blue);
-        max-width: 61%;
+        max-width: 62rem;
     }
 }
 

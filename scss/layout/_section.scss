@@ -6,7 +6,8 @@
     margin: 0 auto;   
     @include for-size(phone-large) {
         display: flex;
-        width: 55%;
+        width: 100%;
+        max-width: 62rem;
         margin-top: 50px;
     }
 }

@@ -88,7 +88,6 @@
 .main-nav__burger-line1{
     .is-active & {
         transform: rotate(-45deg) translate(-5px,6px);
-        background-color: map-get($color, c-dark-grayish-blue);
     }
 }
 
@@ -101,7 +100,6 @@
 .main-nav__burger-line3{
     .is-active & {
         transform: rotate(45deg) translate(-5px,-6px);
-        background-color: map-get($color, c-dark-grayish-blue);
     }
 }
 
