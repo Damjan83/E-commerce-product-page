@@ -4,10 +4,11 @@
     max-width: 100%;
     height: auto;
     margin: 0 auto;   
+    
     @include for-size(phone-large) {
         display: flex;
         width: 100%;
         max-width: 62rem;
-        margin-top: 50px;
+        margin-top: 3.125rem;
     }
 }

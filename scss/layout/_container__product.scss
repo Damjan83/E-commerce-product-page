@@ -2,37 +2,46 @@
     width: 100%;
     height: auto;
     border-radius: 0;
+    
     @include for-size(phone-large) {
         width: 45%;
     } 
 }
+
 .container__product-img, .container__modal-img {  
     border-radius: 0.625rem; 
 }
+
 .productImg {
     display: block;
     border-radius: 0.625rem;
 }
+
 .product {
     border-radius: 0;
+
     @include for-size(phone-large) {
         display: block;
         border-radius: 0.625rem;
     }
 }
+
 .container__thumbnails {
     display: none;
+
     @include for-size(phone-large) {
         display: flex;
         justify-content: space-between;
         margin-top: 0.938rem;
     }
 }
+
 .thumb-img, .thumb-img-modal {
     display: block;
     border-radius: 0.625rem;
     width: 5.625rem;
     height: auto;
+
     &.is-active {
         border: 2px solid map-get($color , c-orange);
         border-radius: 0.625rem;
