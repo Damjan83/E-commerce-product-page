@@ -9,7 +9,7 @@ const containerProductImgActive = document.querySelector('.container__product-im
 const product = containerProductImgActive.querySelector('.product');
 
 const modal = document.querySelector('.modal');
-const thumbActiveModal = document.querySelectorAll('.thumb-img-modal');
+const thumbActiveImgModal = document.querySelectorAll('.thumb-img-modal');
 //const modalActiveImg = document.querySelector('.container__product-modal-img');
 
 const btnPrevious = document.querySelector('.btn--previous');
@@ -27,7 +27,6 @@ const cartModal = document.querySelector('.cart__modal');
 const btnMinus = document.querySelector('.btn__minus');
 const btnPlus = document.querySelector('.btn__plus');
 const inputAmount = document.querySelector('.container__input-amount');
-
 
 const thumbContainer = document.querySelector('.container__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
@@ -83,15 +82,15 @@ btnMinus.addEventListener('click' , () => {
 
 
 /*------Lightbox modal------*/
-for(let i = 0; i < thumbActiveModal.length; i++){
-    thumbActiveModal[i].addEventListener('click' , (e) => { 
+for(let i = 0; i < thumbActiveImgModal.length; i++){
+    thumbActiveImgModal[i].addEventListener('click' , (e) => { 
         const thumbModal = 'container__thumbnails-img-' + [i+1];
         const thumbImgModal = thumbModal.slice(-1);
         document.querySelector('.productImg').src = './images/image-product-' + thumbImgModal + '.jpg';
-        thumbActiveModal.forEach((i) => {
+        thumbActiveImgModal.forEach((i) => {
             i.classList.remove('is-active');
         });
-        thumbActiveModal[i].classList.add('is-active');
+        thumbActiveImgModal[i].classList.add('is-active');
     });
 };
 
@@ -99,23 +98,23 @@ for(let i = 0; i < thumbActiveModal.length; i++){
 let i = 0;
 btnPrevious.addEventListener('click' , () => {
     if(i <= 0) 
-        i = thumbActiveModal.length;
+        i = thumbActiveImgModal.length;
         i--;
-        thumbActiveModal.forEach((i) => {
+        thumbActiveImgModal.forEach((i) => {
             i.classList.remove('is-active');
         });
-        thumbActiveModal[i].classList.add('is-active');
+        thumbActiveImgModal[i].classList.add('is-active');
         return setImg();
 });
 
 btnNext.addEventListener('click' , () => {
-    if(i >= thumbActiveModal.length - 1 ) 
+    if(i >= thumbActiveImgModal.length - 1 ) 
         i = -1;    
         i++;
-        thumbActiveModal.forEach((i) => {
+        thumbActiveImgModal.forEach((i) => {
             i.classList.remove('is-active');
         });
-        thumbActiveModal[i].classList.add('is-active');
+        thumbActiveImgModal[i].classList.add('is-active');
         return setImg();     
 });
 function setImg() {
@@ -126,8 +125,6 @@ function setImg() {
 
 
 /*------ btn previous, btn next mob------*/
-
-
 btnPreviousMob.addEventListener('click' , () => {   
     const currentActiveAttr = product.dataset.active;   
     let getImgIndex = currentActiveAttr; 
@@ -153,14 +150,11 @@ btnNextMob.addEventListener('click' , () => {
 });
 
  
-     
- 
-
-
  btnClose.addEventListener('click' , () => {
     containerModal.style.display = 'none';
     lightboxModal.style.display = 'none';
  });
+
  lightboxModal.addEventListener('click' , () => {
     containerModal.style.display = 'none';
     lightboxModal.style.display = 'none';
@@ -169,13 +163,9 @@ btnNextMob.addEventListener('click' , () => {
  function formatNumber(num){
     return num.toLocaleString('en-US');
 };
+
 /*------cart modal------*/
 cart.addEventListener('click' , () => {
     cartModal.style.display = 'block';
 });
 
-/*function setImgMob() {
-    const imgIndex = './images/image-product-' + [i+1];
-    const imgIndexNum = imgIndex.slice(-1);
-    return document.querySelector('.product').src = './images/image-product-' + imgIndexNum + '.jpg';
-}*/

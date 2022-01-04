@@ -16,7 +16,8 @@
     align-items: center;
     justify-content: center;
     color: map-get($color , c-white);
-
+    cursor: pointer;
+    
     &--img {
         margin-right: 0.625rem;
     }
