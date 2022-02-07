@@ -28,16 +28,30 @@
     font-size: 1em;
     color: map-get($color , c-dark-grayish-blue);
     margin-bottom: 0.625rem;
-    
-    &--desc {
-        line-height: 1.6;
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 .cart__modal-product--img-cart {
     width: 3rem;
     height: auto;
     border-radius: 0.3125rem;
+}
+
+.cart__modal-product--desc {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__modal-product-price {
+    display: flex;
+
+    &--input-amount {
+        margin-left: 5px;
+    }
+}
+
+.cart__modal-product-price--quantity-price {
+    font-weight: bold;
+    color: map-get($color , c-black);
+    margin-left: 10px;
 }

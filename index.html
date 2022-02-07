@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="dist/css/main.css">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div class="main-nav__burger-line3 main-nav__burger-line"></div>
       </div>
       <div class="menu__logo">
-        <img src="./images/logo.svg" alt="logo">
+        <img src="dist/assets/images/logo.svg" alt="logo">
       </div>    
       <div class="modal__mob"></div>
       <ul class="main-nav__menu">
@@ -31,11 +31,13 @@
     </div>
     <div class="menu-1">
       <div class="cart">
-        <img src="./images/icon-cart.svg" alt="cart">
-        <div class="cart__order-number"></div>
+        <img src="dist/assets//images/icon-cart.svg" alt="cart">
+        <div class="cart__order-box">
+          <div class="cart__order-number"></div>
+        </div>
       </div>
       <div class="user-photo">
-        <img src="./images/image-avatar.png" alt="avatar">
+        <img src="dist/assets//images/image-avatar.png" alt="avatar">
       </div>
     </div>
   </div>
@@ -44,14 +46,18 @@
         <p class="cart__modal-header">Cart</p>
         <div class="cart__modal-product">
           <div class="cart__modal-product--img">
-            <img class="cart__modal-product--img-cart" src="./images/image-product-1-thumbnail.jpg" alt="product">
+            <img class="cart__modal-product--img-cart" src="dist/assets/images/image-product-1-thumbnail.jpg" alt="product">
           </div>          
           <div class="cart__modal-product--desc">
-            <p>Fall Limited Edition Sneakers</p>
-            <p>$125.00 x</p>
+            <p class="cart__modal-product-title">Fall Limited Edition Sneakers</p>
+            <div class="cart__modal-product-price">
+              <p class="cart__modal-product-price--amount">$<span class="cart-product-price">125.00</span> x</p>
+              <p class="cart__modal-product-price--input-amount"></p>
+              <p class="cart__modal-product-price--quantity-price"></p>
+            </div>           
           </div>
-          <div class="cart__modal-product--bin">
-            <img src="./images/icon-delete.svg" alt="delete">
+          <div class="cart__modal-product-bin">
+            <img class="cart__modal-product-bin--img" src="dist/assets/images/icon-delete.svg" alt="delete">
           </div>          
         </div>        
         <button class="btn__cart-checkout">Checkout</button>
@@ -70,21 +76,21 @@
           </div>
         </button>
         <div class="container__product-img">
-          <img src="./images/image-product-1.jpg" class="product" alt="sneakers" data-active="1">
+          <img src="dist/assets/images/image-product-1.jpg" class="product" alt="sneakers" data-active="1">
         </div>
         <!--Thumbnail images-->
         <div class="container__thumbnails">
           <div class="container__thumbnails-img-1">
-            <img src="./images/image-product-1-thumbnail.jpg" class="thumb-img" alt="thumbnail">
+            <img src="dist/assets/images/image-product-1-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
           <div class="container__thumbnails-img-2">
-            <img src="./images/image-product-2-thumbnail.jpg" class="thumb-img" alt="thumbnail">
+            <img src="dist/assets/images/image-product-2-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
           <div class="container__thumbnails-img-3">
-            <img src="./images/image-product-3-thumbnail.jpg" class="thumb-img" alt="thumbnail">
+            <img src="dist/assets/images/image-product-3-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
           <div class="container__thumbnails-img-4">
-            <img src="./images/image-product-4-thumbnail.jpg" class="thumb-img" alt="thumbnail">
+            <img src="dist/assets/images/image-product-4-thumbnail.jpg" class="thumb-img" alt="thumbnail">
           </div>
         </div>
       </div>
@@ -107,12 +113,12 @@
         </div>
         <div class="container__product-amount">
           <div class="container__product-input">
-          <button class="btn__minus"><img src="./images/icon-minus.svg"></button>
+          <button class="btn__minus"><img src="dist/assets/images/icon-minus.svg"></button>
           <div class="container__input-amount"></div>
-          <button class="btn__plus"><img src="./images/icon-plus.svg"></button>
+          <button class="btn__plus"><img src="dist/assets/images/icon-plus.svg"></button>
           </div>
           <button class="btn__add-to-cart">
-            <img class="btn__add-to-cart--img" src="./images/icon-cart.svg">Add to cart
+            <img class="btn__add-to-cart--img" src="dist/assets/images/icon-cart.svg">Add to cart
           </button>
         </div>
       </div>
@@ -136,25 +142,25 @@
             <div class="icon__next--line2 icon__next--line"></div>
           </div> 
         </button>   
-        <img src="./images/image-product-1.jpg" class="productImg" alt="sneakers">
+        <img src="dist/assets/images/image-product-1.jpg" class="productImg" alt="sneakers">
       </div>
 
       <!--Thumbnail images-->
       <div class="container__thumbnails">
         <div class="container__thumbnails-img-1">
-          <img src="./images/image-product-1-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
+          <img src="dist/assets/images/image-product-1-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
         </div>
         <div class="container__thumbnails-img-2">
-          <img src="./images/image-product-2-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
+          <img src="dist/assets/images/image-product-2-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
         </div>
         <div class="container__thumbnails-img-3">
-          <img src="./images/image-product-3-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
+          <img src="dist/assets/images/image-product-3-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
         </div>
         <div class="container__thumbnails-img-4">
-          <img src="./images/image-product-4-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
+          <img src="dist/assets/images/image-product-4-thumbnail.jpg" class="thumb-img-modal" alt="thumbnail">
         </div>
       </div>
     </div>
-  <script src="app.js"></script>
+  <script src="dist/js/app.js"></script>
 </body>
 </html>

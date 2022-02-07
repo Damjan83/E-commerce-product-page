@@ -23,10 +23,18 @@ const containerModal = document.querySelector('.container__modal');
 
 const cart = document.querySelector('.cart');
 const cartModal = document.querySelector('.cart__modal');
+const cartModalProductQuantity = document.querySelector('.cart__modal-product-price--input-amount');
+const cartProductPrice = document.querySelector('.cart-product-price');
+const cartProductQuantityPrice = document.querySelector('.cart__modal-product-price--quantity-price');
+const deleteProductQuantityBin = document.querySelector('.cart__modal-product-bin');
 
 const btnMinus = document.querySelector('.btn__minus');
 const btnPlus = document.querySelector('.btn__plus');
 const inputAmount = document.querySelector('.container__input-amount');
+const cartOrderBox = document.querySelector('.cart__order-box');
+const cartOrderNumber = document.querySelector('.cart__order-number');
+const btnAddToCart = document.querySelector('.btn__add-to-cart');
+
 
 const thumbContainer = document.querySelector('.container__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
@@ -50,7 +58,7 @@ for(let i = 0; i < thumbActive.length; i++){
     thumbActive[i].addEventListener('click' , () => { 
         const thumb = 'container__thumbnails-img-' + [i+1];
         const thumbImg = thumb.slice(-1);
-        document.querySelector('.product').src = './images/image-product-' + thumbImg + '.jpg';
+        document.querySelector('.product').src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
         thumbActive.forEach((i) => {
             i.classList.remove('is-active');
         });
@@ -86,7 +94,7 @@ for(let i = 0; i < thumbActiveImgModal.length; i++){
     thumbActiveImgModal[i].addEventListener('click' , (e) => { 
         const thumbModal = 'container__thumbnails-img-' + [i+1];
         const thumbImgModal = thumbModal.slice(-1);
-        document.querySelector('.productImg').src = './images/image-product-' + thumbImgModal + '.jpg';
+        document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + thumbImgModal + '.jpg';
         thumbActiveImgModal.forEach((i) => {
             i.classList.remove('is-active');
         });
@@ -120,7 +128,7 @@ btnNext.addEventListener('click' , () => {
 function setImg() {
     const setBtnActive = 'container__thumbnails-img-' + [i+1];
     const setBtnImg = setBtnActive.slice(-1);
-    return document.querySelector('.productImg').src = './images/image-product-' + setBtnImg + '.jpg';
+    return document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + setBtnImg + '.jpg';
  }
 
 
@@ -133,7 +141,7 @@ btnPreviousMob.addEventListener('click' , () => {
     }else {
         getImgIndex--;
     }   
-    product.src = './images/image-product-' + getImgIndex + '.jpg';
+    product.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
     product.setAttribute("data-active",getImgIndex); 
 });
 
@@ -145,7 +153,7 @@ btnNextMob.addEventListener('click' , () => {
     }else {
         getImgIndex++;
     }   
-    product.src = './images/image-product-' + getImgIndex + '.jpg';
+    product.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
     product.setAttribute("data-active",getImgIndex); 
 });
 
@@ -160,7 +168,36 @@ btnNextMob.addEventListener('click' , () => {
     lightboxModal.style.display = 'none';
  });
 
- function formatNumber(num){
+
+btnAddToCart.addEventListener('click' , () => {
+    if(inputAmount.innerHTML > 0) {
+        cartOrderNumber.innerHTML = inputAmount.innerHTML;
+        cartOrderBox.style.display = 'block';
+        cartModalProductQuantity.innerHTML = inputAmount.innerHTML;
+        cartProductQuantityPrice.innerHTML = (cartProductPrice.innerHTML * inputAmount.innerHTML).toFixed(2);              
+    }
+ });
+
+deleteProductQuantityBin.addEventListener('click' , () => {
+    cartModalProductQuantity.innerHTML -= 1;
+    cartOrderNumber.innerHTML -= 1;
+
+    if(cartModalProductQuantity.innerHTML <= 0 || cartOrderNumber.innerHTML <= 0) {
+        cartModalProductQuantity.innerHTML = 0;
+        cartOrderNumber.innerHTML = 0;
+    }
+
+    const quantityNum = parseInt(cartProductQuantityPrice.innerHTML)
+    const productPrice = parseInt(cartProductPrice.innerHTML)
+    cartProductQuantityPrice.innerHTML = quantityNum - productPrice;
+    if(cartProductQuantityPrice.innerHTML <= 0) {
+        cartProductQuantityPrice.innerHTML = 0;
+    }
+    
+});
+
+
+function formatNumber(num){
     return num.toLocaleString('en-US');
 };
 
