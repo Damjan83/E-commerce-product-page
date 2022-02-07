@@ -23,6 +23,7 @@ const containerModal = document.querySelector('.container__modal');
 
 const cart = document.querySelector('.cart');
 const cartModal = document.querySelector('.cart__modal');
+const cartModalEmpty = document.querySelector('.cart__modal-empty');
 const cartModalProductQuantity = document.querySelector('.cart__modal-product-price--input-amount');
 const cartProductPrice = document.querySelector('.cart-product-price');
 const cartProductQuantityPrice = document.querySelector('.cart__modal-product-price--quantity-price');
@@ -174,13 +175,15 @@ btnAddToCart.addEventListener('click' , () => {
         cartOrderNumber.innerHTML = inputAmount.innerHTML;
         cartOrderBox.style.display = 'block';
         cartModalProductQuantity.innerHTML = inputAmount.innerHTML;
-        cartProductQuantityPrice.innerHTML = (cartProductPrice.innerHTML * inputAmount.innerHTML).toFixed(2);              
+        cartProductQuantityPrice.innerHTML = (cartProductPrice.innerHTML * inputAmount.innerHTML).toFixed(2);
+        cartModalEmpty.style.display = 'none';             
     }
  });
 
 deleteProductQuantityBin.addEventListener('click' , () => {
     cartModalProductQuantity.innerHTML -= 1;
     cartOrderNumber.innerHTML -= 1;
+    inputAmount.innerHTML -= 1;
 
     if(cartModalProductQuantity.innerHTML <= 0 || cartOrderNumber.innerHTML <= 0) {
         cartModalProductQuantity.innerHTML = 0;
@@ -192,17 +195,32 @@ deleteProductQuantityBin.addEventListener('click' , () => {
     cartProductQuantityPrice.innerHTML = quantityNum - productPrice;
     if(cartProductQuantityPrice.innerHTML <= 0) {
         cartProductQuantityPrice.innerHTML = 0;
+        cartModal.style.display = 'none';
+        cartModalEmpty.style.display = 'none';
     }
     
 });
 
 
+
+cart.addEventListener('click' , () => {
+    if(cartModalEmpty.style.display === 'none') {
+        cartModalEmpty.style.display = 'block';
+    }else{
+        cartModalEmpty.style.display = 'none';
+    }
+    
+    if(inputAmount.innerHTML > 0) {
+        cartModal.style.display = 'block'; 
+        cartModalEmpty.style.display = 'none';
+    }
+    
+    
+});
+
 function formatNumber(num){
     return num.toLocaleString('en-US');
 };
 
-/*------cart modal------*/
-cart.addEventListener('click' , () => {
-    cartModal.style.display = 'block';
-});
+
 
