@@ -198,6 +198,7 @@ deleteProductQuantityBin.addEventListener('click' , () => {
         cartProductQuantityPrice.innerHTML = 0;
         cartModal.style.display = 'none';
         cartModalEmpty.style.display = 'none';
+        cartOrderBox.style.display ='none';
     }
     
 });

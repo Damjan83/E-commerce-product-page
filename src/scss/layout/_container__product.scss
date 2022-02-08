@@ -2,6 +2,7 @@
     width: 100%;
     height: auto;
     border-radius: 0;
+    position: relative;
     
     @include for-size(phone-large) {
         width: 45%;

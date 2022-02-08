@@ -55,5 +55,5 @@ The designs were created to the following widths:
   Add to cart
    
 
-
+right: 3.3125rem;
    

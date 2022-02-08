@@ -56,6 +56,10 @@
         top: 43%;
     }
 
+    @include for-size(phone-small) {
+        top: 42%;
+    }
+
     &--previous {
         @include for-size(phone-large) {
             left: -4.5%;
@@ -68,13 +72,13 @@
         }
     }
     &--previous-mob {
-        left: 2.5%;
+        left: 4.5%;
         @include for-size(phone-large) {
             display: none;
         }       
     }
     &--next-mob {
-        right: 2.5%;
+        right: 4.5%;
         z-index: 1;
         @include for-size(phone-large) {
             display: none;
