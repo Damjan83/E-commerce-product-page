@@ -13,13 +13,16 @@
 }
 
 .cart__modal-empty-text {
+    color: map-get($color , c-dark-grayish-blue);
     text-align: center;
+    padding-top: 30px;    
+    font-weight: bold;
 }
 
 .cart__modal-header {
     font-size: 1em;
     color: map-get($color , c-dark);
-    font-weight: 700;
+    font-weight: bold;
     margin: 0.625rem 0 1.875rem 0;
 }
 
@@ -54,8 +57,8 @@
     }
 }
 
-.cart__modal-product-price--quantity-price {
-    font-weight: bold;
-    color: map-get($color , c-black);
+.cart__modal-product-price-quantity {
     margin-left: 10px;
+    font-weight: bold;
+    color: map-get($color , c-black);    
 }

@@ -26,7 +26,7 @@ const cartModal = document.querySelector('.cart__modal');
 const cartModalEmpty = document.querySelector('.cart__modal-empty');
 const cartModalProductQuantity = document.querySelector('.cart__modal-product-price--input-amount');
 const cartProductPrice = document.querySelector('.cart-product-price');
-const cartProductQuantityPrice = document.querySelector('.cart__modal-product-price--quantity-price');
+const cartProductQuantityPrice = document.querySelector('.cart__modal-product-price-quantity--price');
 const deleteProductQuantityBin = document.querySelector('.cart__modal-product-bin');
 
 const btnMinus = document.querySelector('.btn__minus');
@@ -169,7 +169,7 @@ btnNextMob.addEventListener('click' , () => {
     lightboxModal.style.display = 'none';
  });
 
-
+/*------Add to cart------*/ 
 btnAddToCart.addEventListener('click' , () => {
     if(inputAmount.innerHTML > 0) {
         cartOrderNumber.innerHTML = inputAmount.innerHTML;
@@ -180,6 +180,7 @@ btnAddToCart.addEventListener('click' , () => {
     }
  });
 
+/*------Delete from cart------*/ 
 deleteProductQuantityBin.addEventListener('click' , () => {
     cartModalProductQuantity.innerHTML -= 1;
     cartOrderNumber.innerHTML -= 1;
@@ -190,9 +191,9 @@ deleteProductQuantityBin.addEventListener('click' , () => {
         cartOrderNumber.innerHTML = 0;
     }
 
-    const quantityNum = parseInt(cartProductQuantityPrice.innerHTML)
-    const productPrice = parseInt(cartProductPrice.innerHTML)
-    cartProductQuantityPrice.innerHTML = quantityNum - productPrice;
+    const quantityNum = parseInt(cartProductQuantityPrice.innerHTML);
+    const productPrice = parseInt(cartProductPrice.innerHTML);
+    cartProductQuantityPrice.innerHTML = (quantityNum - productPrice).toFixed(2);
     if(cartProductQuantityPrice.innerHTML <= 0) {
         cartProductQuantityPrice.innerHTML = 0;
         cartModal.style.display = 'none';
@@ -202,7 +203,7 @@ deleteProductQuantityBin.addEventListener('click' , () => {
 });
 
 
-
+/*------Empty cart------*/
 cart.addEventListener('click' , () => {
     if(cartModalEmpty.style.display === 'none') {
         cartModalEmpty.style.display = 'block';
