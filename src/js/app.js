@@ -1,3 +1,12 @@
+import {addToCart, deleteFromCart, emptyCart, btnPlusMinus} from './components/cart';
+
+
+addToCart();
+deleteFromCart();
+emptyCart();
+btnPlusMinus();
+
+
 const burger = document.querySelector('.main-nav__burger');
 const nav = document.querySelector('.main-nav__menu');
 const menuItem = document.querySelector('.main-nav__menu-item');
@@ -10,7 +19,6 @@ const product = containerProductImgActive.querySelector('.product');
 
 const modal = document.querySelector('.modal');
 const thumbActiveImgModal = document.querySelectorAll('.thumb-img-modal');
-//const modalActiveImg = document.querySelector('.container__product-modal-img');
 
 const btnPrevious = document.querySelector('.btn--previous');
 const btnNext = document.querySelector('.btn--next');
@@ -21,25 +29,9 @@ const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
 const containerModal = document.querySelector('.container__modal');
 
-const cart = document.querySelector('.cart');
-const cartModal = document.querySelector('.cart__modal');
-const cartModalEmpty = document.querySelector('.cart__modal-empty');
-const cartModalProductQuantity = document.querySelector('.cart__modal-product-price--input-amount');
-const cartProductPrice = document.querySelector('.cart-product-price');
-const cartProductQuantityPrice = document.querySelector('.cart__modal-product-price-quantity--price');
-const deleteProductQuantityBin = document.querySelector('.cart__modal-product-bin');
-
-const btnMinus = document.querySelector('.btn__minus');
-const btnPlus = document.querySelector('.btn__plus');
-const inputAmount = document.querySelector('.container__input-amount');
-const cartOrderBox = document.querySelector('.cart__order-box');
-const cartOrderNumber = document.querySelector('.cart__order-number');
-const btnAddToCart = document.querySelector('.btn__add-to-cart');
-
 
 const thumbContainer = document.querySelector('.container__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
-
 
 
 
@@ -68,25 +60,7 @@ for(let i = 0; i < thumbActive.length; i++){
 };
 containerProductImgActive.addEventListener('click', () => {
     modal.style.display = 'block';
-    containerModal.style.display = 'block';
-});
-
-/*------btn plus and minus------*/
-let app = { currentValue: 0};
-inputAmount.innerHTML = formatNumber(0);
-btnPlus.addEventListener('click' , () => {
-    const currentAmount = formatNumber(app.currentValue += 1);
-    inputAmount.innerHTML  = currentAmount;
-});
-btnMinus.addEventListener('click' , () => {
-    let currentAmount = 0;
-  
-    if(app.currentValue <= 0) {
-        return;
-    }else {
-        currentAmount = formatNumber(app.currentValue -= 1);
-        inputAmount.innerHTML  = currentAmount;
-    }   
+    containerModal.style.display = 'block';   
 });
 
 
@@ -126,11 +100,6 @@ btnNext.addEventListener('click' , () => {
         thumbActiveImgModal[i].classList.add('is-active');
         return setImg();     
 });
-function setImg() {
-    const setBtnActive = 'container__thumbnails-img-' + [i+1];
-    const setBtnImg = setBtnActive.slice(-1);
-    return document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + setBtnImg + '.jpg';
- }
 
 
 /*------ btn previous, btn next mob------*/
@@ -169,60 +138,15 @@ btnNextMob.addEventListener('click' , () => {
     lightboxModal.style.display = 'none';
  });
 
-/*------Add to cart------*/ 
-btnAddToCart.addEventListener('click' , () => {
-    if(inputAmount.innerHTML > 0) {
-        cartOrderNumber.innerHTML = inputAmount.innerHTML;
-        cartOrderBox.style.display = 'block';
-        cartModalProductQuantity.innerHTML = inputAmount.innerHTML;
-        cartProductQuantityPrice.innerHTML = (cartProductPrice.innerHTML * inputAmount.innerHTML).toFixed(2);
-        cartModalEmpty.style.display = 'none';             
-    }
- });
-
-/*------Delete from cart------*/ 
-deleteProductQuantityBin.addEventListener('click' , () => {
-    cartModalProductQuantity.innerHTML -= 1;
-    cartOrderNumber.innerHTML -= 1;
-    inputAmount.innerHTML -= 1;
-
-    if(cartModalProductQuantity.innerHTML <= 0 || cartOrderNumber.innerHTML <= 0) {
-        cartModalProductQuantity.innerHTML = 0;
-        cartOrderNumber.innerHTML = 0;
-    }
-
-    const quantityNum = parseInt(cartProductQuantityPrice.innerHTML);
-    const productPrice = parseInt(cartProductPrice.innerHTML);
-    cartProductQuantityPrice.innerHTML = (quantityNum - productPrice).toFixed(2);
-    if(cartProductQuantityPrice.innerHTML <= 0) {
-        cartProductQuantityPrice.innerHTML = 0;
-        cartModal.style.display = 'none';
-        cartModalEmpty.style.display = 'none';
-        cartOrderBox.style.display ='none';
-    }
-    
-});
 
 
-/*------Empty cart------*/
-cart.addEventListener('click' , () => {
-    if(cartModalEmpty.style.display === 'none') {
-        cartModalEmpty.style.display = 'block';
-    }else{
-        cartModalEmpty.style.display = 'none';
-    }
-    
-    if(inputAmount.innerHTML > 0) {
-        cartModal.style.display = 'block'; 
-        cartModalEmpty.style.display = 'none';
-    }
-    
-    
-});
+function setImg() {
+    const setBtnActive = 'container__thumbnails-img-' + [i+1];
+    const setBtnImg = setBtnActive.slice(-1);
+    return document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + setBtnImg + '.jpg';
+ }
 
-function formatNumber(num){
-    return num.toLocaleString('en-US');
-};
+
 
 
 
