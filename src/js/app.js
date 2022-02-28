@@ -60,7 +60,11 @@ for(let i = 0; i < thumbActive.length; i++){
 };
 containerProductImgActive.addEventListener('click', () => {
     modal.style.display = 'block';
-    containerModal.style.display = 'block';   
+    containerModal.style.display = 'block';
+    if(window.innerWidth < 768) {
+        modal.style.display = 'none';
+        containerModal.style.display = 'none';
+    }   
 });
 
 
