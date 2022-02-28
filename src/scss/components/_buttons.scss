@@ -17,14 +17,14 @@
     justify-content: center;
     color: map-get($color , c-white);
     cursor: pointer;
+    margin-right: 0;
     
     &--img {
         margin-right: 0.625rem;
     }
     
     @include for-size(phone-large) {    
-        margin-right: 1.875rem; 
-        max-width: 15rem;
+        max-width: 13rem;
     }
 }
 

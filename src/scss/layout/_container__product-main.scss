@@ -114,6 +114,7 @@
 }
 
 .container__product-input {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,6 +125,7 @@
         display: flex;
         margin-bottom: 0;
         padding: 0;
+        margin-right: 3.25rem;
     }
 }
 
