@@ -62,11 +62,11 @@
     text-decoration: none;
     margin-right: 1.875rem;
     color: map-get($color, c-dark-grayish-blue);
-    border-bottom: 2px solid transparent;
+    border-bottom: 4px solid transparent;
 
     &:hover {
         color: map-get($color, c-vark-blue);
-        border-bottom: 2px solid map-get($color, c-orange);
+        border-bottom: 4px solid map-get($color, c-orange);
     }
 
     &.is-active {
