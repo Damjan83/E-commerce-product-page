@@ -1,12 +1,13 @@
 .header {
     width: 100%;   
-    height: 4.375rem;
+    height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
         @include for-size(phone-large) {
         border-bottom: 1px solid map-get($color, c-grayish-blue);
-        max-width: 62rem;
+        max-width: 1110px;
     }
 }
 
@@ -66,7 +67,8 @@
     }
     
     @include for-size(phone-large) {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 3.125rem;
+        height: 3.125rem;
+        margin: 28px 0 34px 46px;
     }
 }
