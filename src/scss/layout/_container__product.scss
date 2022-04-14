@@ -5,7 +5,10 @@
     position: relative;
     
     @include for-size(phone-large) {
-        width: 45%;
+        width: 100%;
+        max-width: 445px;
+        min-height: 565px;
+        margin-right: 7.8125rem;
     } 
 }
 
@@ -33,14 +36,14 @@
     @include for-size(phone-large) {
         display: flex;
         justify-content: space-between;
-        margin-top: 0.938rem;
+        margin-top: 2rem;
     }
 }
 
 .thumb-img, .thumb-img-modal {
     display: block;
     border-radius: 0.625rem;
-    width: 5.625rem;
+    width: 5.5rem;
     height: auto;
 
     &.is-active {
