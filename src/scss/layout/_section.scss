@@ -1,14 +1,13 @@
 .container {
     display: block;
-    justify-content: space-evenly;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 0 auto;   
     
     @include for-size(phone-large) {
         display: flex;
-        width: 100%;
-        max-width: 62rem;
+        max-width: 1015px;
+        min-height: 565px;
         margin-top: 3.125rem;
     }
 }
