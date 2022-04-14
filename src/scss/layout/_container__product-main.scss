@@ -1,27 +1,31 @@
 .container__product-main {
     width: 100%;
     height: auto;
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
 
     @include for-size(phone-large) {
-        width: 45%;
+        width: 100%;
+        max-width: 445px;
+        padding: 0;
     } 
 }
 
 .container__product-headline {
     width: 100%;
     height: auto;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
     @include for-size(phone-large) {
-        margin-top: 4rem;
+        margin-top: 3.875rem;
     }
 }
 
 .container__product-headline-top {
-    font-size: 0.8em;
+    font-size: 0.8125em;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 700;
+    line-height: 16px;
     color: map-get($color , c-orange);
 
     @include for-size(phone-large) {
@@ -30,11 +34,13 @@
 }
 
 .container__product-headline-bottom {
-    font-size: 2em;
-    margin-top: 1.25rem;
+    font-size: 1.75em;
+    line-height: 32px;
+    margin-top: 1.5rem;
 
     @include for-size(phone-large){
-        font-size: 2em;
+        font-size: 2.75em;
+        line-height: 48px;
     }
 }
 
@@ -44,24 +50,24 @@
     margin-top: 2rem;
 
     @include for-size(phone-large){
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 }
 
 .container__product-desc-body {
-    font-size: 0.9375em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 26px;
     color: map-get($color , c-dark-grayish-blue);
 
     @include for-size(phone-large){
-        padding-right: 1.125rem;
+        
     }
 }
 
 .conatainer__product-sale-price {
     display: flex;
     align-items: center;
-    margin-top: 2rem;  
+    margin-top: 1.5rem;  
     justify-content: space-between;
 
     @include for-size(phone-large){
@@ -76,36 +82,48 @@
 }
 
 .container__product-price-new {
-    font-size: 1.5em;
+    width: 100px;
+    height: 35px;
+    font-size: 1.75em;
+    line-height: 34px;
     font-weight: 700;
-    margin-right: 1rem;
+    margin-right: 1.4375rem;
+
+    @include for-size(phone-large){
+        margin-right: 1rem;  
+    }
 }
 
 .container__product-price-percent {
-    font-size: 0.925em;
+    width: 32px;
+    height: 20px;
+    font-size: 1em;
+    line-height: 20px;
     padding: 0.125rem;
     color: map-get($color , c-orange);
     background-color: map-get($color , c-orange-pale);
 }
 
 .container__product-price-regular {
-    text-decoration-line: line-through;
-    color: map-get($color , c-dark-grayish-blue );
-    font-size: 0.725em;
+    width: 63px;
+    height: 26px;
+    color: map-get($color , c-grayish-blue );
 
     @include for-size(phone-large){
-        margin-top: 1rem;
+        margin-top: 0.1875rem;
     }
 }
 
 .container__product-price-regular--old {
-    font-size: 1.3em;
+    font-size: 1em;
+    line-height: 26px;
+    text-decoration-line: line-through;
 }
 
 .container__product-amount {
     display: block;
     align-items: center;
-    margin-top: 2.3125rem;
+    margin-top: 2rem;
     justify-content: space-between;
 
     @include for-size(phone-large) {
@@ -115,6 +133,9 @@
 
 .container__product-input {
     width: 100%;
+    max-width: 157px;
+    height: auto;
+    min-height: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,10 +146,12 @@
         display: flex;
         margin-bottom: 0;
         padding: 0;
-        margin-right: 3.25rem;
+        margin-right: 1rem;
     }
 }
 
 .container__input-amount {
+    font-size: 16px;
+    line-height: 20px;
     margin: 0 1.875rem;
 }
