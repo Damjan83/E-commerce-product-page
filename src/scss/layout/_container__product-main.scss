@@ -54,12 +54,12 @@
 }
 
 .container__product-desc-body {
-    font-size: 1em;
+    font-size: 0.9375em;
     line-height: 26px;
     color: map-get($color , c-dark-grayish-blue);
 
     @include for-size(phone-large){
-        
+        font-size: 1em;
     }
 }
 
