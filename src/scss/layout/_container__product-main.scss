@@ -13,7 +13,6 @@
 .container__product-headline {
     width: 100%;
     height: auto;
-    margin-top: 1.5rem;
 
     @include for-size(phone-large) {
         margin-top: 3.875rem;
@@ -123,7 +122,7 @@
 .container__product-amount {
     display: block;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     justify-content: space-between;
 
     @include for-size(phone-large) {
@@ -132,17 +131,17 @@
 }
 
 .container__product-input {
-    width: 100%;
-    max-width: 157px;
+    width: 100%; 
     height: auto;
     min-height: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1rem;
     padding: 0 1.25rem;
 
     @include for-size(phone-large) {
+        max-width: 157px;
         display: flex;
         margin-bottom: 0;
         padding: 0;
