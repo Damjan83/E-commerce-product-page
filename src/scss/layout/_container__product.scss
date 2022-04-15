@@ -45,6 +45,8 @@
     @include for-size(phone-large) {
         display: block;
         border-radius: 0.625rem;
+        max-width: 445px;
+        min-height: 445px;
     }
 }
 
