@@ -9,18 +9,16 @@
         width: 100%;
         max-width: 445px;
         min-height: 565px;
-        margin-right: 7.8125rem;
+        margin-right: auto;
     } 
 }
 
 .container__product-img {
     width: 100%;
-    max-width: 375px;
-    height: 300px;
+    max-width: 100%;
 
     @include for-size(phone-large) {
-        max-width: 445px;
-        min-height: 445px;
+       
     }
 }
 
@@ -38,15 +36,11 @@
 .product {
     border-radius: 0;
     width: 100%;
-    max-width: 375px;
     height: auto;
-    height: 300px;
 
     @include for-size(phone-large) {
         display: block;
         border-radius: 0.625rem;
-        max-width: 445px;
-        min-height: 445px;
     }
 }
 
