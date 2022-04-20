@@ -15,7 +15,7 @@ const modalMob = document.querySelector('.modal__mob');
 
 const thumbActive = document.querySelectorAll('.thumb-img');
 const containerProductImgActive = document.querySelector('.container__product-img');
-const product = containerProductImgActive.querySelector('.product');
+//const product = containerProductImgActive.querySelector('.product');
 
 const modal = document.querySelector('.modal');
 const thumbActiveImgModal = document.querySelectorAll('.thumb-img-modal');
