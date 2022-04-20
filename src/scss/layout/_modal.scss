@@ -39,5 +39,6 @@
 .container__thumbnails-img-1, .container__thumbnails-img-2, .container__thumbnails-img-3, .container__thumbnails-img-4 {
     background-color: map-get($color , c-white);
     border-radius: 10px;
+    cursor: pointer;
 }
 

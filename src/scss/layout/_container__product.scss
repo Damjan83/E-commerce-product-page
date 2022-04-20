@@ -1,4 +1,4 @@
-.product {
+.container-product {
     width: 100%;
     height: auto;
     min-height: 300px;
@@ -15,6 +15,10 @@
 .container__product-img, .container__modal-img {  
     border-radius: 0.625rem; 
     margin-bottom: 32px;
+}
+
+.container__product-img {
+    cursor: pointer;
 }
 
 
