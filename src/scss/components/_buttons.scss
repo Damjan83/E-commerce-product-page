@@ -81,6 +81,7 @@
     }
     &--previous-mob {
         left: 2.5%;
+        z-index: 1;
         @include for-size(phone-large) {
             display: none;
         }       
