@@ -14,7 +14,7 @@ const menuLink = document.querySelectorAll('.main-nav__menu-link');
 const modalMob = document.querySelector('.modal__mob');
 
 const thumbActive = document.querySelectorAll('.thumb-img');
-const containerProductImgActive = document.querySelector('.product__img-container');
+const containerProductImgActive = document.querySelector('.container__product-img');
 const product = containerProductImgActive.querySelector('.product');
 
 const modal = document.querySelector('.modal');

@@ -8,21 +8,11 @@
     @include for-size(phone-large) {
         width: 100%;
         max-width: 445px;
-        min-height: 565px;
         margin-right: auto;
     } 
 }
 
-.product__img-container {
-    width: 100%;
-    max-width: 100%;
-
-    @include for-size(phone-large) {
-       
-    }
-}
-
-.product__img-container, .container__modal-img {  
+.container__product-img, .container__modal-img {  
     border-radius: 0.625rem; 
     margin-bottom: 32px;
 }
