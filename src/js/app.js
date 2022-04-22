@@ -14,8 +14,7 @@ const menuLink = document.querySelectorAll('.main-nav__menu-link');
 const modalMob = document.querySelector('.modal__mob');
 
 const thumbActive = document.querySelectorAll('.thumb-img');
-const containerProductImgActive = document.querySelector('.container__product-img');
-//const product = containerProductImgActive.querySelector('.product');
+const containerProductImgActive = document.querySelector('.product-img');
 
 const modal = document.querySelector('.modal');
 const thumbActiveImgModal = document.querySelectorAll('.thumb-img-modal');
@@ -29,11 +28,8 @@ const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
 const containerModal = document.querySelector('.container__modal');
 
-
 const thumbContainer = document.querySelector('.product__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
-
-
 
 /*------Burger and mobile menu------*/
 burger.addEventListener('click' , () => {
@@ -51,7 +47,7 @@ for(let i = 0; i < thumbActive.length; i++){
     thumbActive[i].addEventListener('click' , () => { 
         const thumb = 'container__thumbnails-img-' + [i+1];
         const thumbImg = thumb.slice(-1);
-        document.querySelector('.product').src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
+        document.querySelector('.product-img').src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
         thumbActive.forEach((i) => {
             i.classList.remove('is-active');
         });
@@ -108,27 +104,27 @@ btnNext.addEventListener('click' , () => {
 
 /*------ btn previous, btn next mob------*/
 btnPreviousMob.addEventListener('click' , () => {   
-    const currentActiveAttr = product.dataset.active;   
+    const currentActiveAttr = containerProductImgActive.dataset.active;   
     let getImgIndex = currentActiveAttr; 
     if(getImgIndex <= 1){ 
         getImgIndex = 4;
     }else {
         getImgIndex--;
     }   
-    product.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
-    product.setAttribute("data-active",getImgIndex); 
+    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
+    containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
 btnNextMob.addEventListener('click' , () => {
-    const currentActiveAttr = product.dataset.active;   
+    const currentActiveAttr = containerProductImgActive.dataset.active;   
     let getImgIndex = currentActiveAttr; 
     if(getImgIndex >= 4){ 
         getImgIndex = 1;
     }else {
         getImgIndex++;
     }   
-    product.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
-    product.setAttribute("data-active",getImgIndex); 
+    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
+    containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
  

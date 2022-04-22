@@ -1,11 +1,11 @@
 /*------cart modal------*/
 .cart__modal, .cart__modal-empty {
-    width: 21.625rem;
-    height: 12.9375rem;
+    width: 360px;
+    height: 256px;
     position: absolute;
     display: none;
     background-color: map-get($color , c-white);
-    top: 4.4375rem;
+    top: 6.4375rem;
     right: 1rem;
     padding: 0 1.25rem;
     border-radius: 0.625rem;
@@ -17,8 +17,8 @@
     }
 
     @include for-size(phone-small) {
-        top: 5.4375rem;
-        right: 1rem;
+        top: 87px;
+        right: 8px;
         z-index: 5;
     }
 }
