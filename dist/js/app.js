@@ -13,8 +13,8 @@ var menuItem = document.querySelector('.main-nav__menu-item');
 var menuLink = document.querySelectorAll('.main-nav__menu-link');
 var modalMob = document.querySelector('.modal__mob');
 var thumbActive = document.querySelectorAll('.thumb-img');
-var containerProductImgActive = document.querySelector('.container__product-img'); 
-const product = containerProductImgActive.querySelector('.container-product');
+var containerProductImgActive = document.querySelector('.container__product-img'); //const product = containerProductImgActive.querySelector('.product');
+
 var modal = document.querySelector('.modal');
 var thumbActiveImgModal = document.querySelectorAll('.thumb-img-modal');
 var btnPrevious = document.querySelector('.btn--previous');
