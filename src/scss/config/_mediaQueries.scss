@@ -15,4 +15,13 @@
       @else if $size == desktop-large{
       @media (min-width: 1920px) { @content; }
     }
+
+    @else if $size == middle-resolution {
+      @media (min-width: 768px) and (max-width: 1180px) { @content; }
+    }
+
+    @else if $size == small-resolution {
+      @media (min-width: 375px) and (max-width: 768px) { @content; }
+      
+    }
   }
