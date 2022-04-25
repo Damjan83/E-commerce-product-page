@@ -51,7 +51,7 @@ function changeMainHandler(ele, eleArray, bgFlag) {
             const thumb = 'container__thumbnails-img-' + [i + 1];
             const thumbImg = thumb.slice(-1);
             if(bgFlag) {
-                ele.style.backgroundImage = 'url(../dist/assets/images/image-product-' + thumbImg + '.jpg)';
+                ele.style.backgroundImage = 'url(../assets/images/image-product-' + thumbImg + '.jpg)';
             }else{
                 ele.src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
             }
@@ -99,7 +99,7 @@ btnPreviousMob.addEventListener('click' , () => {
     }else {
         getImgIndex--;
     }   
-    containerProductImgActive.src = 'url(../dist/assets/images/image-product-' + getImgIndex + '.jpg)';
+    containerProductImgActive.src = 'url(../assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
@@ -111,11 +111,10 @@ btnNextMob.addEventListener('click' , () => {
     }else {
         getImgIndex++;
     }   
-    containerProductImgActive.src = 'url(../dist/assets/images/image-product-' + getImgIndex + '.jpg)';
+    containerProductImgActive.src = 'url(../assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
- 
  btnClose.addEventListener('click' , () => {
     containerModal.style.display = 'none';
     lightboxModal.style.display = 'none';
