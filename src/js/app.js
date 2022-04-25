@@ -65,7 +65,6 @@ function changeMainHandler(ele, eleArray, bgFlag) {
     }
 }
 
-
 /*------lightbox btn previous and next------*/
 let i = 0;
 btnPrevious.addEventListener('click' , () => {
