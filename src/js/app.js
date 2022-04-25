@@ -26,6 +26,8 @@ const containerModal = document.querySelector('.container__modal');
 const thumbContainer = document.querySelector('.product__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
 
+const baseUrl = 'https://github.com/Damjan83/E-commerce-product-page';
+
 /*------Burger and mobile menu------*/
 burger.addEventListener('click' , () => {
     nav.classList.toggle('is-active');
@@ -52,7 +54,7 @@ function changeMainHandler(ele, eleArray, bgFlag) {
             const thumb = 'container__thumbnails-img-' + [i + 1];
             const thumbImg = thumb.slice(-1);
             if(bgFlag) {
-                ele.style.backgroundImage = 'url(../dist/assets/images/image-product-' + thumbImg + '.jpg)';
+                ele.style.backgroundImage = 'url(baseUrl/dist/assets/images/image-product-' + thumbImg + '.jpg)';
             }else{
                 ele.src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
             }
