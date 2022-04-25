@@ -9,6 +9,7 @@ const modalMob = document.querySelector('.modal__mob');
 
 const thumbActive = document.querySelectorAll('.thumb-img');
 const containerProductImgActive = document.querySelector('.product-img');
+const mainProductImgModal = document.querySelector('.productImg');
 
 const modal = document.querySelector('.modal');
 const thumbActiveImgModal = document.querySelectorAll('.thumb-img-modal');
