@@ -10,7 +10,6 @@
     padding: 0 24px;
     border-radius: 0.625rem;
     box-shadow: 0 0.625rem 1.25rem -0.375rem #777;
-    z-index: 1;
 
     @include for-size(phone-large) {      
         right: 23.3125rem;

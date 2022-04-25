@@ -1,12 +1,6 @@
 import {addToCart, deleteFromCart, emptyCart, btnPlusMinus} from './components/cart';
 
 
-addToCart();
-deleteFromCart();
-emptyCart();
-btnPlusMinus();
-
-
 const burger = document.querySelector('.main-nav__burger');
 const nav = document.querySelector('.main-nav__menu');
 const menuItem = document.querySelector('.main-nav__menu-item');
@@ -42,18 +36,6 @@ burger.addEventListener('click' , () => {
     modalMob.classList.toggle('is-active');
 });
 
-/*------Changing thumb img whit main img------*/
-for(let i = 0; i < thumbActive.length; i++){
-    thumbActive[i].addEventListener('click' , () => { 
-        const thumb = 'container__thumbnails-img-' + [i+1];
-        const thumbImg = thumb.slice(-1);
-        document.querySelector('.product-img').src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
-        thumbActive.forEach((i) => {
-            i.classList.remove('is-active');
-        });
-        thumbActive[i].classList.add('is-active');
-    });
-};
 containerProductImgActive.addEventListener('click', () => {
     modal.style.display = 'block';
     containerModal.style.display = 'block';
@@ -63,19 +45,25 @@ containerProductImgActive.addEventListener('click', () => {
     }   
 });
 
+function changeMainHandler(ele, eleArray, bgFlag) {
+    for(let i = 0; i < eleArray.length; i++){
+        eleArray[i].addEventListener('click', function() {
+            const thumb = 'container__thumbnails-img-' + [i + 1];
+            const thumbImg = thumb.slice(-1);
+            if(bgFlag) {
+                ele.style.backgroundImage = 'url(../dist/assets/images/image-product-' + thumbImg + '.jpg)';
+            }else{
+                ele.src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
+            }
 
-/*------Lightbox modal------*/
-for(let i = 0; i < thumbActiveImgModal.length; i++){
-    thumbActiveImgModal[i].addEventListener('click' , (e) => { 
-        const thumbModal = 'container__thumbnails-img-' + [i+1];
-        const thumbImgModal = thumbModal.slice(-1);
-        document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + thumbImgModal + '.jpg';
-        thumbActiveImgModal.forEach((i) => {
-            i.classList.remove('is-active');
+            eleArray.forEach(function(i) {
+                i.classList.remove('is-active');
+            });
+            eleArray[i].classList.add('is-active');
         });
-        thumbActiveImgModal[i].classList.add('is-active');
-    });
-};
+    }
+}
+
 
 /*------lightbox btn previous and next------*/
 let i = 0;
@@ -111,7 +99,7 @@ btnPreviousMob.addEventListener('click' , () => {
     }else {
         getImgIndex--;
     }   
-    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
+    containerProductImgActive.src = 'url(../dist/assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
@@ -123,7 +111,7 @@ btnNextMob.addEventListener('click' , () => {
     }else {
         getImgIndex++;
     }   
-    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
+    containerProductImgActive.src = 'url(../dist/assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
@@ -146,7 +134,10 @@ function setImg() {
     return document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + setBtnImg + '.jpg';
  }
 
+addToCart();
+deleteFromCart();
+emptyCart();
+btnPlusMinus();
 
-
-
-
+changeMainHandler(containerProductImgActive, thumbActive, true)
+changeMainHandler(mainProductImgModal, thumbActiveImgModal)
