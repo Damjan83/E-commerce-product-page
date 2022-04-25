@@ -52,7 +52,7 @@ function changeMainHandler(ele, eleArray, bgFlag) {
             const thumb = 'container__thumbnails-img-' + [i + 1];
             const thumbImg = thumb.slice(-1);
             if(bgFlag) {
-                ele.style.backgroundImage = 'url(../assets/images/image-product-' + thumbImg + '.jpg)';
+                ele.style.backgroundImage = 'url(../../assets/images/image-product-' + thumbImg + '.jpg)';
             }else{
                 ele.src = 'dist/assets/images/image-product-' + thumbImg + '.jpg';
             }
@@ -140,3 +140,4 @@ btnPlusMinus();
 
 changeMainHandler(containerProductImgActive, thumbActive, true)
 changeMainHandler(mainProductImgModal, thumbActiveImgModal)
+
