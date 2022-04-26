@@ -22,7 +22,7 @@ const addToCart = () => {
             cartOrderBox.style.display = 'block';
             cartModalProductQuantity.innerHTML = inputAmount.innerHTML;
             cartProductQuantityPrice.innerHTML = (cartProductPrice.innerHTML * inputAmount.innerHTML).toFixed(2);
-            cartModalEmpty.style.display = 'none';             
+            cartModalEmpty.style.display = 'none';
         }
      });
 }
