@@ -26,7 +26,7 @@ const containerModal = document.querySelector('.container__modal');
 const thumbContainer = document.querySelector('.product__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
 
-const baseUrl = 'https://github.com/Damjan83/E-commerce-product-page';
+const baseUrl = 'https://damjan83.github.io/E-commerce-product-page';
 
 /*------Burger and mobile menu------*/
 burger.addEventListener('click' , () => {
