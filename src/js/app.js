@@ -26,7 +26,8 @@ const containerModal = document.querySelector('.container__modal');
 const thumbContainer = document.querySelector('.product__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
 
-const baseUrl = 'https://damjan83.github.io/E-commerce-product-page/';
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 
 /*------Burger and mobile menu------*/
 burger.addEventListener('click' , () => {
@@ -101,7 +102,7 @@ btnPreviousMob.addEventListener('click' , () => {
     }else {
         getImgIndex--;
     }   
-    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
+    containerProductImgActive.style.backgroundImage = 'url(' + baseUrl + '/dist/assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
@@ -113,7 +114,10 @@ btnNextMob.addEventListener('click' , () => {
     }else {
         getImgIndex++;
     }   
-    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
+
+
+
+    containerProductImgActive.style.backgroundImage = 'url(' + baseUrl + '/dist/assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
