@@ -101,7 +101,7 @@ btnPreviousMob.addEventListener('click' , () => {
     }else {
         getImgIndex--;
     }   
-    containerProductImgActive.src = 'url(../dist/assets/images/image-product-' + getImgIndex + '.jpg)';
+    containerProductImgActive.src = 'url(' + baseUrl + '/dist/assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
@@ -113,7 +113,7 @@ btnNextMob.addEventListener('click' , () => {
     }else {
         getImgIndex++;
     }   
-    containerProductImgActive.src = 'url(../dist/assets/images/image-product-' + getImgIndex + '.jpg)';
+    containerProductImgActive.src = 'url(' + baseUrl + '/dist/assets/images/image-product-' + getImgIndex + '.jpg)';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
