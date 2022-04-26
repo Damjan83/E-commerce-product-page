@@ -101,7 +101,7 @@ btnPreviousMob.addEventListener('click' , () => {
     }else {
         getImgIndex--;
     }   
-    containerProductImgActive.style.backgroundImage = 'url(' + baseUrl + '/dist/assets/images/image-product-' + getImgIndex + '.jpg)';
+    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
@@ -113,7 +113,7 @@ btnNextMob.addEventListener('click' , () => {
     }else {
         getImgIndex++;
     }   
-    containerProductImgActive.style.backgroundImage = 'url(' + baseUrl + '/dist/assets/images/image-product-' + getImgIndex + '.jpg)';
+    containerProductImgActive.src = 'dist/assets/images/image-product-' + getImgIndex + '.jpg';
     containerProductImgActive.setAttribute("data-active",getImgIndex); 
 });
 
