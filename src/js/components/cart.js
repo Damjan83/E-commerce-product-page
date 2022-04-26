@@ -12,6 +12,40 @@ const inputAmount = document.querySelector('.container__input-amount');
 const btnMinus = document.querySelector('.btn__minus');
 const btnPlus = document.querySelector('.btn__plus');
 
+const popUpHeader = document.createElement('p');
+popUpHeader.classList.add('popup-header');
+cartModal.appendChild(popUpHeader);
+document.querySelector('.popup-header').textContent = 'Cart';
+
+const popUpContent = document.createElement('div');
+popUpContent.classList.add('popup-content');
+cartModal.appendChild(popUpContent);
+
+const popUpContentFull = document.createElement('div');
+popUpContentFull.classList.add('popup-content__full');
+popUpContent.appendChild(popUpContentFull)
+
+const popUpContentFullImg = document.createElement('img');
+popUpContentFullImg.classList.add('popup-content__full-img')
+popUpContentFull.appendChild(popUpContentFullImg);
+
+const popUpContentFullText = document.createElement('img');
+popUpContentFullText.classList.add('popup-content__full-text')
+popUpContentFull.appendChild(popUpContentFullText);
+
+const popUpContentEmpty = document.createElement('div');
+popUpContentEmpty.classList.add('popup-content__empty');
+popUpContent.appendChild(popUpContentEmpty);
+document.querySelector('.popup-content__empty').textContent = 'Your cart is empty.';
+console.log(popUpContent)
+
+const popUpFooter = document.createElement('div');
+popUpFooter.classList.add('popup-footer');
+cartModal.appendChild(popUpFooter);
+
+
+    
+
 
 /*------Add to cart------*/ 
 const addToCart = () => {
