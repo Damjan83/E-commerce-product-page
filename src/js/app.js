@@ -1,4 +1,5 @@
 import {addToCart, deleteFromCart, emptyCart, btnPlusMinus} from './components/cart';
+import popup from './components/popup';
 
 
 const burger = document.querySelector('.main-nav__burger');
@@ -139,10 +140,13 @@ function setImg() {
     return document.querySelector('.productImg').src = 'dist/assets/images/image-product-' + setBtnImg + '.jpg';
  }
 
+const popupTriggerEle = document.querySelector('.js-popup-trigger');
+
 addToCart();
 deleteFromCart();
 emptyCart();
 btnPlusMinus();
+popup(popupTriggerEle);
 
 changeMainHandler(containerProductImgActive, thumbActive, true)
 changeMainHandler(mainProductImgModal, thumbActiveImgModal)

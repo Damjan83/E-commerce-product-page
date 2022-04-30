@@ -1,44 +1,7 @@
 /*------cart modal------*/
-.cart__modal, .cart__modal-empty {
-    width: 360px;
-    height: 256px;
-    position: absolute;
-    display: none;
-    background-color: map-get($color , c-white);
-    top: 6.4375rem;
-    right: 1rem;
-    padding: 0 24px;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.625rem 1.25rem -0.375rem #777;
 
-    @include for-size(phone-large) {      
-        right: 23.3125rem;
-    }
 
-    @include for-size(phone-small) {
-        top: 87px;
-        right: 8px;
-        z-index: 5;
-    }
-    
-    @include for-size(small-resolution) {
-        z-index: 2;
-    }
-}
 
-.cart__modal-empty-text {
-    color: map-get($color , c-dark-grayish-blue);
-    text-align: center;
-    padding-top: 30px;    
-    font-weight: bold;
-}
-
-.cart__modal-header {
-    font-size: 1em;
-    color: map-get($color , c-dark);
-    font-weight: bold;
-    margin: 24px 0 52px 0;
-}
 
 .cart__modal-product {
     width: 100%;
@@ -51,17 +14,8 @@
     margin-bottom: 24px;
 }
 
-.cart__modal-product--img-cart {
-    width: 3rem;
-    height: auto;
-    border-radius: 0.3125rem;
-}
 
-.cart__modal-product--desc {
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-}
+
 
 .cart__modal-product-price {
     display: flex;
@@ -71,7 +25,7 @@
     }
 }
 
-.cart__modal-product-price-quantity {
+.popup__product-total {
     margin-left: 10px;
     font-weight: bold;
     color: map-get($color , c-black);    

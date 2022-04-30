@@ -30,7 +30,7 @@
       
     </div>
     <div class="menu-1">
-      <div class="cart">
+      <div class="cart js-popup-trigger">
         <img src="dist/assets//images/icon-cart.svg" alt="cart">
         <div class="cart__order-box">
           <div class="cart__order-number"></div>
@@ -42,29 +42,32 @@
     </div>
   </div>
     <section class="container">
-      <div class="cart__modal">
-        <p class="cart__modal-header">Cart</p>
-        <div class="cart__modal-product">
-          <div class="cart__modal-product--img">
-            <img class="cart__modal-product--img-cart" src="dist/assets/images/image-product-1-thumbnail.jpg" alt="product">
-          </div>          
-          <div class="cart__modal-product--desc">
-            <p class="cart__modal-product-title">Fall Limited Edition Sneakers</p>
-            <div class="cart__modal-product-price">
-              <p class="cart__modal-product-price--amount">$<span class="cart-product-price">125.00</span> x</p>
-              <p class="cart__modal-product-price--input-amount"></p>
-              <p class="cart__modal-product-price-quantity">$<span class="cart__modal-product-price-quantity--price"></span></p>
-            </div>           
-          </div>
-          <div class="cart__modal-product-bin">
-            <img class="cart__modal-product-bin--img" src="dist/assets/images/icon-delete.svg" alt="delete">
-          </div>          
-        </div>        
-        <button class="btn__cart-checkout">Checkout</button>
-      </div>
-      <div class="cart__modal-empty">
-        <p class="cart__modal-header">Cart</p>
-        <p class="cart__modal-empty-text">Your cart is empty.</p>
+      <div class="popup">
+        <div class="popup__header">
+          <p>Cart</p>
+        </div>     
+        <div class="popup__content">             
+          <div class="popup__empty-content">
+            <p class="popup__text">Your cart is empty.</p>
+          </div>  
+          <div class="popup__full-content">  
+            <div class="popup__product-wraper">
+              <img class="popup__img" src="dist/assets/images/image-product-1-thumbnail.jpg" alt="product">          
+            <div class="popup__product">
+                <p class="popup__product-title">Fall Limited Edition Sneakers</p>
+                <div class="popup__product-price">
+                  <div class="popup__product-value">$125.00 </div>
+                  <div class="popup__product-amount"></div>
+                  <div class="popup__product-total"></div>
+                </div>           
+            </div>
+            <div class="popup__bin">
+                <img class="popup__bin-img" src="dist/assets/images/icon-delete.svg" alt="delete">
+            </div>
+            </div>                     
+            <button class="btn__cart-checkout">Checkout</button>           
+          </div>    
+        </div>               
       </div>
       <div class="container-product"> 
         <button class="btn btn--previous-mob">

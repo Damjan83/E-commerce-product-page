@@ -3,11 +3,12 @@
     width: 100%;
     height: auto;
     margin: 0 auto;   
+    position: relative;
     
     @include for-size(phone-large) {
         display: flex;
         max-width: 1015px;
         min-height: 565px;
-        margin-top: 3.125rem;
+        margin-top: 50px;
     }
 }
