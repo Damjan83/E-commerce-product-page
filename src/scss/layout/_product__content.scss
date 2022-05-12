@@ -1,4 +1,4 @@
-.container__product-main {
+.product__content{
     width: 100%;
     height: auto;
     padding: 0 1.5rem;
@@ -10,7 +10,7 @@
     } 
 }
 
-.container__product-headline {
+.product__title-container {
     width: 100%;
     height: auto;
 
@@ -19,7 +19,7 @@
     }
 }
 
-.container__product-headline-top {
+.product__company {
     font-size: 0.8125em;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -32,7 +32,7 @@
     }
 }
 
-.container__product-headline-bottom {
+.product__title {
     font-size: 1.75em;
     line-height: 32px;
     margin-top: 1.5rem;
@@ -43,7 +43,7 @@
     }
 }
 
-.container__product-desc {
+.product__desc {
     width: 100%;
     height: auto;
     margin-top: 2rem;
@@ -53,7 +53,7 @@
     }
 }
 
-.container__product-desc-body {
+.product__desc-text{
     font-size: 0.9375em;
     line-height: 26px;
     color: map-get($color , c-dark-grayish-blue);
@@ -63,7 +63,7 @@
     }
 }
 
-.conatainer__product-sale-price {
+.product-sale {
     display: flex;
     align-items: center;
     margin-top: 1.5rem;  
@@ -75,12 +75,12 @@
     }
 }
 
-.container__product-price {
+.product-sale__price {
     display: flex;
     align-items: center;  
 }
 
-.container__product-price-new {
+.product-sale__price-new {
     width: 100px;
     height: 35px;
     font-size: 1.75em;
@@ -93,7 +93,7 @@
     }
 }
 
-.container__product-price-percent {
+.product-sale__price-off {
     width: 32px;
     height: 20px;
     font-size: 1em;
@@ -103,7 +103,7 @@
     background-color: map-get($color , c-orange-pale);
 }
 
-.container__product-price-regular {
+.product-sale__regular {
     width: 63px;
     height: 26px;
     color: map-get($color , c-grayish-blue );
@@ -113,7 +113,7 @@
     }
 }
 
-.container__product-price-regular--old {
+.product-sale__regular-old {
     font-size: 1em;
     line-height: 26px;
     text-decoration-line: line-through;

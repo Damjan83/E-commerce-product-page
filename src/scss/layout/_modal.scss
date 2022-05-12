@@ -36,7 +36,7 @@
     display: none;
 }
 
-.container__thumbnails-img-1, .container__thumbnails-img-2, .container__thumbnails-img-3, .container__thumbnails-img-4 {
+.product__thumbnail-container-1, .product__thumbnail-container-2, .product__thumbnail-container-3, .product__thumbnail-container-4 {
     background-color: map-get($color , c-white);
     border-radius: 10px;
     cursor: pointer;
