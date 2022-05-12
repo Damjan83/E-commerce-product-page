@@ -8,7 +8,6 @@ const popup = (trigger, action) => {
             popup.classList.add('is-active');
         }
     });
-    console.log('popup');   
 }
 
 export default popup;

@@ -1,4 +1,4 @@
-import {addToCart, deleteFromCart, emptyCart, btnPlusMinus} from './components/cart';
+import {addToCart, deleteFromCart, btnPlusMinus} from './components/cart';
 import popup from './components/popup';
 
 
@@ -144,7 +144,6 @@ const popupTriggerEle = document.querySelector('.js-popup-trigger');
 
 addToCart();
 deleteFromCart();
-emptyCart();
 btnPlusMinus();
 popup(popupTriggerEle);
 
