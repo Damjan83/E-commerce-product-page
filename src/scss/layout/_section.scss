@@ -2,8 +2,11 @@
     display: block;
     width: 100%;
     height: auto;
+<<<<<<< HEAD
     margin: 0 auto;   
     position: relative;
+=======
+>>>>>>> 8c1d524 (changes)
     
     @include for-size(phone-large) {
         display: flex;
