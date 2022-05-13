@@ -23,9 +23,11 @@ const btnNextMob = document.querySelector('.btn--next-mob');
 const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
 const containerModal = document.querySelector('.container__modal');
-
+const overlay = document.querySelector('.overlay');
+const overlayPopup = document.querySelector('.popup');
 const thumbContainer = document.querySelector('.product__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
+
 
 var getUrl = window.location;
 var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
@@ -132,7 +134,9 @@ btnNextMob.addEventListener('click' , () => {
     lightboxModal.style.display = 'none';
  });
 
-
+ overlay.addEventListener('click' , function() {
+    overlayPopup.style.display = 'none';
+ })
 
 function setImg() {
     const setBtnActive = 'container__thumbnails-img-' + [i+1];
