@@ -135,7 +135,7 @@ btnNextMob.addEventListener('click' , () => {
  });
 
  overlay.addEventListener('click' , function() {
-    overlayPopup.style.display = 'none';
+    overlayPopup.classList.remove('is-active');
  })
 
 function setImg() {
