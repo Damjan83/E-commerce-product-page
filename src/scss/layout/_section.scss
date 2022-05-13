@@ -2,7 +2,6 @@
     display: block;
     width: 100%;
     height: auto;
-    margin: 0 auto;   
     
     @include for-size(phone-large) {
         display: flex;
