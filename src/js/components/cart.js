@@ -13,6 +13,10 @@ const btnPlus = document.querySelector('.btn__plus');
 const cartSlicedValue = cartValue.innerHTML.slice(1, cartValue.lenght)
 const cartEmptyContent = document.querySelector('.popup__empty-content');
 const cartFullContent = document.querySelector('.popup__full-content');
+
+const overlay = document.querySelector('.overlay');
+const overlayPopup = document.querySelector('.popup');
+
 let productCurrentValue = { currentValue: 0};
 
 /*------Add to cart------*/ 
@@ -37,7 +41,7 @@ const deleteFromCart = () => {
         cartAmount.innerHTML = 'x' + (strippedValue - 1);
         cartOrderNumber.innerHTML -= 1;
         inputAmount.innerHTML -= 1;
-        console.log()
+
         if(cartAmount.innerHTML <= 0 || cartOrderNumber.innerHTML <= 0) {
             cartAmount.innerHTML = 0;
             cartOrderNumber.innerHTML = 0;
@@ -75,6 +79,10 @@ const btnPlusMinus = () => {
         }   
     });
 }
+
+overlay.addEventListener('click' , function() {
+    overlayPopup.classList.remove('is-active');
+ })
 
 function formatNumber(num){
     return num.toLocaleString('en-US');

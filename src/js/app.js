@@ -23,8 +23,7 @@ const btnNextMob = document.querySelector('.btn--next-mob');
 const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
 const containerModal = document.querySelector('.container__modal');
-const overlay = document.querySelector('.overlay');
-const overlayPopup = document.querySelector('.popup');
+
 const thumbContainer = document.querySelector('.product__thumbnails');
 const thumbContainerImages = thumbContainer.children.length;
 
@@ -133,10 +132,6 @@ btnNextMob.addEventListener('click' , () => {
     containerModal.style.display = 'none';
     lightboxModal.style.display = 'none';
  });
-
- overlay.addEventListener('click' , function() {
-    overlayPopup.classList.remove('is-active');
- })
 
 function setImg() {
     const setBtnActive = 'container__thumbnails-img-' + [i+1];

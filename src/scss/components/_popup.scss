@@ -18,6 +18,7 @@
     @include for-size(phone-large) {      
         top: -68px;
         right: -12%;
+        z-index: 3;
     }
 
     @include for-size(phone-small) {
