@@ -125,6 +125,7 @@ btnNextMob.addEventListener('click' , () => {
  btnClose.addEventListener('click' , () => {
     containerModal.style.display = 'none';
     lightboxModal.style.display = 'none';
+    container.classList.remove('is-active');
  });
 
  lightboxModal.addEventListener('click' , () => {
