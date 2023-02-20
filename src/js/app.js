@@ -23,13 +23,10 @@ const btnNextMob = document.querySelector('.btn--next-mob');
 const btnClose = document.querySelector('.icon__close');
 const lightboxModal = document.querySelector('.modal');
 const containerModal = document.querySelector('.container__modal');
+const container = document.querySelector('.container');
 
-const thumbContainer = document.querySelector('.product__thumbnails');
-const thumbContainerImages = thumbContainer.children.length;
-
-
-var getUrl = window.location;
-var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+let getUrl = window.location;
+let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 
 /*------Burger and mobile menu------*/
 burger.addEventListener('click' , () => {
@@ -45,9 +42,11 @@ burger.addEventListener('click' , () => {
 containerProductImgActive.addEventListener('click', () => {
     modal.style.display = 'block';
     containerModal.style.display = 'block';
+    container.classList.add('is-active');
     if(window.innerWidth < 768) {
         modal.style.display = 'none';
         containerModal.style.display = 'none';
+        container.classList.remove('is-active');
     }   
 });
 
@@ -131,6 +130,7 @@ btnNextMob.addEventListener('click' , () => {
  lightboxModal.addEventListener('click' , () => {
     containerModal.style.display = 'none';
     lightboxModal.style.display = 'none';
+    container.classList.remove('is-active');
  });
 
 function setImg() {

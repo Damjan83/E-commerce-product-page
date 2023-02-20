@@ -12,6 +12,10 @@
         margin-top: 50px;
         z-index: 2;
     }
+
+    &.is-active {
+        z-index: 0;
+    }
 }
 
 .overlay {
@@ -19,4 +23,9 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    display: none;
+     
+    @include for-size(phone-large) {
+        display: block;
+    }
 }
